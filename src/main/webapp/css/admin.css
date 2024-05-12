@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.menu{
+    background-color: rgb(181, 243, 145);
+    justify-content: center;
+    height: 40px;
+}
+
+.menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    text-align: center;
+}
+
+.menu ul li{
+    margin-right: 20px;
+}
+
+.menu ul li:last-child{
+    margin-right: 0;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    display: block;
+}
+
+.menu ul li a:hover{
+    background-color: brown;
+}
+
+.caja{
+  
+}
+
+
+
+

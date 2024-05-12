@@ -1,0 +1,28 @@
+/* Estilo para el contenedor de cada reseña */
+.reseña {
+    border: 1px solid #ccc; /* Borde gris */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 20px; /* Margen inferior */
+    display: flex; /* Usar flexbox para diseño flexible */
+}
+
+/* Estilo para la sección izquierda */
+#izquierda {
+    flex: 1; /* Que ocupe el 50% del espacio disponible */
+    padding-right: 20px; /* Espacio entre la sección izquierda y derecha */
+}
+
+/* Estilo para la sección derecha */
+#derecha {
+    flex: 2; /* Que ocupe el 50% del espacio disponible */
+}
+
+/* Estilos para los elementos dentro de la sección izquierda */
+#nombreUsuario, #Fecha, #Calificación {
+    margin-bottom: 10px; /* Margen inferior */
+}
+
+/* Estilos para los elementos dentro de la sección derecha */
+#titulo, #contenido {
+    margin-bottom: 10px; /* Margen inferior */
+}

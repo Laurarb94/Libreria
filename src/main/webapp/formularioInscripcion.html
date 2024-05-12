@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de inscripción</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/formulario.css">
+    <script src="formulario.js"></script>
+</head>
+
+ 
+<body>
+    <div class="contenedor">
+        <header class="header">
+            <h1>LIBRERÍA MI LIMÓN</h1>
+            <div class="img__back"></div>
+        </header>
+    
+    <div class="formulario">
+    
+       <form name ="altas" action="GestionUsuario" method="post" id="altas">  
+        <h4>Formulario de registro usuarios</h4>
+    <input type = "hidden" id="id" name="id">
+    <input class="control" type="text" name="nombre" id="nombre" placeholder="Introduce tu Nombre">
+    <input class="control" type="text" name="apellido1" id="apellido1" placeholder="Introduce tu primer Apellido">
+    <input class="control" type="text" name="apellido2" id="apellido2" placeholder="Introduce tu segundo Apellido">
+    <input class="control" type="number" name="telefono" id="telefono" placeholder="Introduce tu teléfono">
+    <input class="control" type="text" name="codPostal" id="codPostal" placeholder="Introduce Código Postal">
+    <input class="control" type="text" name="mail" id="mail" placeholder="Introduce tu e-mail">
+    <input class="control" type="password" name="password" id="password" placeholder="Introduce tu contraseña">
+    <select name ="permiso" class="control">
+      <option value="0">...</option>
+      <option value="1">Usuario/a registrado/a</option>
+      <option value="5">Usuario/a Autor/a</option>
+      <option value="9">Usuaio/a Administrador/a</option>
+    </select>
+    <input class="boton" type="submit" onclick="validarFormulario()" value="Resgistrar">
+    </form>
+    </div>
+    
+   
+
+    <footer class="footer">
+        <h4>FOOTER</h4>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat labore quod quibusdam enim, saepe, dolor 
+            maiores debitis maxime porro, deleniti nostrum! Sit distinctio eos magnam? Laborum qui 
+            assumenda aut quas.</p>
+    </footer>
+
+    </div>
+</body>
+</html>
