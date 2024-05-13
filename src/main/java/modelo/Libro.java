@@ -2,6 +2,8 @@ package modelo;
 
 import java.sql.SQLException;
 
+import com.google.gson.Gson;
+
 import dao.DaoLibro;
 
 public class Libro {
@@ -57,6 +59,10 @@ public class Libro {
 		this.apellido2AutorLibro = apellido2AutorLibro;
 		this.generoLibro = generoLibro;
 		this.psinopsis = psinopsis;
+	}
+
+	public Libro() {
+		// TODO Auto-generated constructor stub
 	}
 
 	public int getIdLibro() {
@@ -130,6 +136,43 @@ public class Libro {
 	public void setFotoPortada(String fotoPortada) {
 		this.fotoPortada = fotoPortada;
 	}
+	
+	
+	public void insertarLibro () throws SQLException {
+		DaoLibro.getInstance().insertarLibro(this);
+	}
+	
+	public void actualizar () throws SQLException {
+		DaoLibro.getInstance().actualizar(this);
+	}
+	
+	public void borrar (int idLibro) throws SQLException {
+		DaoLibro.getInstance().borrar(idLibro);
+	}
+	
+	public void obtenerPorId (int idLibro) throws SQLException {
+		DaoLibro dao = new DaoLibro();
+		Libro aux = dao.obtenerPorId(idLibro);
+		
+		this.setIdLibro(aux.getIdLibro());
+		this.setIsbn(aux.getIsbn());
+		this.setTituloLibro(aux.getTituloLibro());
+		this.setNombreAutorLibro(aux.getNombreAutorLibro());
+		this.setApellido1AutorLibro(aux.getApellido1AutorLibro());
+		this.setApellido2AutorLibro(aux.getApellido2AutorLibro());
+		this.setGeneroLibro(aux.getGeneroLibro());
+		this.setPsinopsis(aux.getPsinopsis());
+		this.setFotoPortada(aux.getFotoPortada());	
+		
+	}
+	
+	public String dameJson() {
+		String json = "";
+		Gson gson = new Gson();
+		json = gson.toJson(this);
+		return json;
+	}
+	
 
 	@Override
 	public String toString() {
@@ -140,10 +183,6 @@ public class Libro {
 	}
 	
 	
-	
-	public void insertarLibro () throws SQLException {
-		DaoLibro.getInstance().insertarLibro(this);
-	}
 	
 	
 	

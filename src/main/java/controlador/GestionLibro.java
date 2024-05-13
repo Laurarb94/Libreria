@@ -18,6 +18,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.sql.SQLException;
 
+import dao.DaoLibro;
+
 /**
  * Servlet implementation class GestionLibro
  */
@@ -42,8 +44,50 @@ public class GestionLibro extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		PrintWriter out = response.getWriter();
+		
+		int opcion = Integer.parseInt(request.getParameter("op"));
+		
+		if(opcion == 2) {
+			//lógica de edicion
+			int idLibro = Integer.parseInt(request.getParameter("id"));
+			Libro l = new Libro();
+			
+			try {
+				l.obtenerPorId(idLibro);
+				out.print(l.dameJson());
+				System.out.println(l.dameJson());
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			
+		}else if (opcion == 1) {
+			DaoLibro libros; 
+			try {
+				libros = new DaoLibro();
+				out.print(libros.listarJson());
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}else if (opcion == 3) {
+			try {
+				int idLibro = Integer.parseInt(request.getParameter("idLibro"));
+				DaoLibro libros = new DaoLibro();
+				libros.borrar(idLibro);
+				out.print(libros.listarJson());
+				
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		
 	}
 
 	/**
@@ -58,6 +102,7 @@ public class GestionLibro extends HttpServlet {
 		String apellido2AutorLibro = request.getParameter("apellido2AutorLibro");
 		String generoLibro = request.getParameter("generoLibro");
         String psinopsis = request.getParameter("psinopsis");
+        String idLibro = request.getParameter("idLibro");
         
         //Primero hago la lectura en origen
         Part part = request.getPart("fotoPortada"); //me da los datos de la foto
@@ -74,17 +119,30 @@ public class GestionLibro extends HttpServlet {
 		try {
 			Files.copy(input, file.toPath());
 		}catch (Exception e) {
-			System.out.println("Error al copiar el archivo");
+			System.out.println("Error al copiar el archivo" +e.getMessage());
+			e.printStackTrace();
+			response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+			
 			PrintWriter error = response.getWriter(); //para que salga el error por pantalla
 			error.print("Se ha producido un error, contacte con el administrador");
 		}
-				
-		Libro l = new Libro (isbn, tituloLibro, nombreAutorLibro, apellido1AutorLibro,
-				apellido2AutorLibro, generoLibro, psinopsis, fileName);
-	
+			
+		
+		
+		Libro l; 
 		
 		try {
-			l.insertarLibro();
+			l = new Libro (isbn, tituloLibro, nombreAutorLibro, apellido1AutorLibro,
+					apellido2AutorLibro, generoLibro, psinopsis, fileName);
+		
+			if(idLibro == null || idLibro.trim().isEmpty()) {
+				l.insertarLibro();
+			}else {
+				int idLibroInt = Integer.parseInt(idLibro);
+				l.setIdLibro(idLibroInt);
+				l.actualizar();
+			}
+			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

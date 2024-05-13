@@ -1,8 +1,20 @@
 function llamada (){
-	fetch('GestionLibro')
+	fetch('GestionLibro?op=1')
 	.then(response => response.json ())
 	.then (data => pintarTabla(data))
 }
+
+function borrar(idLibro){
+		
+		if(confirm("Seguro que quieres borrar")){
+			fetch('GestionLibro?idLibro='+idLibro+'&op=3')
+			.then(response => response.json())
+			.then(data => pintarTabla(data))
+		}else{
+			
+		}
+	}
+	
 
 
 function pintarTabla (datos){
@@ -17,7 +29,7 @@ function pintarTabla (datos){
 				html += "<td>"+datos[i].apellido2AutorLibro+"</td>";
 				html += "<td>"+datos[i].generoLibro+"</td>";
 				html += "<td>"+datos[i].psinopsis+"</td>";			
-				html += "<td><a href='formularioInscripcion.html?id="+datos[i].id+"&op=2'>Editar</a></td><td><a href='javascript:borrar("+datos[i].id+")'>Borrar</a></td>";
+				html += "<td><a href='añadirLibros.html?idLibro="+datos[i].idLibro+"&op=2'>Editar</a></td><td><a href='javascript:borrar("+datos[i].idLibro+")'>Borrar</a></td>";
 				html +="</tr>";
 		}
 		
