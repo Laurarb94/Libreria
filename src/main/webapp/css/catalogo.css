@@ -1,0 +1,24 @@
+.libro{
+	display: flex;
+	margin-bottom: 20px;
+	padding: 10px;
+	background-color: #f9f9f9;
+}
+
+.detalles {
+	flex: 1;
+	padding-left: 20px;
+}
+
+.acciones {
+	flex: 0 0 100px; /**ancho fijo de las acciones**/
+	display: flex;
+	flex-direccion: column; 
+	justify-content: space-between;
+}
+
+.acciones a{
+	margin-bottom: 10px;
+	
+}
+

@@ -1,3 +1,4 @@
+/*
 function llamada (){
 	fetch('GestionLibro?op=1')
 	.then(response => response.json ())
@@ -28,7 +29,8 @@ function pintarTabla (datos){
 				html +="<td>"+datos[i].apellido1AutorLibro+"</td>";
 				html += "<td>"+datos[i].apellido2AutorLibro+"</td>";
 				html += "<td>"+datos[i].generoLibro+"</td>";
-				html += "<td>"+datos[i].psinopsis+"</td>";			
+				html += "<td>"+datos[i].psinopsis+"</td>";
+				html += "<td>"+datos[i].fotoPortada+"</td>";			
 				html += "<td><a href='añadirLibros.html?idLibro="+datos[i].idLibro+"&op=2'>Editar</a></td><td><a href='javascript:borrar("+datos[i].idLibro+")'>Borrar</a></td>";
 				html +="</tr>";
 		}
@@ -47,59 +49,97 @@ function pintarTabla (datos){
 	    	llamada();
     }
 
+*/
 
 
 
-/*
-function cargarDatos() {
-    // URL del servlet
-    let url = "GestionLibro";
-    
-    // Realiza la llamada al servlet
-    fetch(url)
-    .then(response => response.json())
-    .then(data => {
-        // Cuando se reciben los datos, llama a la función para pintar los resultados
-        pintarResultados(data);
-    })
-    .catch(error => {
-        console.error('Error al cargar los datos:', error);
-    });
+
+
+function llamada (){
+    fetch('GestionLibro?op=1')
+    .then(response => response.json ())
+    .then (data => pintarLista(data))
 }
 
-function pintarResultados(datos) {
-	console.log(datos);
-    // Obtiene el contenedor donde se mostrarán los resultados
-    const contenedor = document.getElementById("resultados");
-    // Limpiar el contenedor antes de agregar los nuevos datos
-    contenedor.innerHTML = "";
+function borrar(idLibro){
+    if(confirm("Seguro que quieres borrar")){
+        fetch('GestionLibro?idLibro='+idLibro+'&op=3')
+        .then(response => response.json())
+        .then(data => pintarLista(data))
+    } else {
+        
+    }
+}
 
-    // Itera sobre los datos y crea un elemento HTML para cada libro
+function pintarLista (datos){
+    const contenedorLibros = document.getElementById("resultados");
+    contenedorLibros.innerHTML = ""; // Limpiar el contenido anterior
+    
     datos.forEach(libro => {
         const libroDiv = document.createElement("div");
         libroDiv.classList.add("libro");
-        libroDiv.setAttribute("data-id", libro.idLibro); //agrego atributo id data para poder tener un id para función borrar
         
-        libroDiv.innerHTML = `
-            <div id="cajaFoto">
-            <img src="image/${libro.fotoPortada}" id="foto" alt="Portada del libro">
-            </div>
-            <div id="cajaLibro">
-                <div id="titulo"><h1>${libro.tituloLibro}</h1></div>
-                <div id="autor"><h2>${libro.nombreAutorLibro}</h2></div>
-                <div id="apellido1"><h2>${libro.apellido1AutorLibro}</h2></div>
-                <div id="apellido2"><h2>${libro.apellido2AutorLibro}</h2></div>
-                <div id="genero"><h3>${libro.generoLibro}</h3></div>
-                <div id="psinopsis">${libro.psinopsis}</div>
-            </div>
-        `;
+        const fotoDiv = document.createElement("div");
+        fotoDiv.classList.add("foto");
+        const foto = document.createElement("img");
+        foto.src = "image/" + libro.fotoPortada;
+        foto.alt = "Portada del libro";
+        fotoDiv.appendChild(foto);
+        libroDiv.appendChild(fotoDiv);
         
-        // Agrega el elemento del libro al contenedor
-        contenedor.appendChild(libroDiv);
-    });
+        const detallesDiv = document.createElement("div");
+        detallesDiv.classList.add("detalles");
+        const autor = document.createElement("h3");
+        autor.textContent = libro.nombreAutorLibro;
+        detallesDiv.appendChild(autor);
+        const genero = document.createElement("p");
+        genero.innerHTML = "<strong>Genero:</strong> " + libro.generoLibro;
+        detallesDiv.appendChild(genero);
+        const psinopsis = document.createElement("p");
+        psinopsis.textContent = libro.psinopsis;
+        detallesDiv.appendChild(psinopsis);
+        libroDiv.appendChild(detallesDiv);
+        
+        const accionesDiv = document.createElement("div");
+        accionesDiv.classList.add("acciones");
+        const editarLink = document.createElement("a");
+        editarLink.href = "añadirLibros.html?idLibro=" + libro.idLibro + "&op=2";
+        editarLink.textContent = "Editar";
+        accionesDiv.appendChild(editarLink);
+        const borrarLink = document.createElement("a");
+        borrarLink.href = "javascript:borrar(" + libro.idLibro + ")";
+        borrarLink.textContent = "Borrar";
+        accionesDiv.appendChild(borrarLink);
+        libroDiv.appendChild(accionesDiv);
+        
+        contenedorLibros.appendChild(libroDiv);
+    });
 }
 
- window.onload = function(){
-	 cargarDatos();
- }
-*/
+
+    window.onload = function() {
+	
+	    	llamada();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
