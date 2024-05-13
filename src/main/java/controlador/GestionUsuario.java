@@ -38,27 +38,34 @@ public class GestionUsuario extends HttpServlet {
 		
 		int opcion = Integer.parseInt(request.getParameter("op"));
 		
-		if(opcion == 1) {
+		if(opcion == 2) {
+			//lógica edición
+			
+			int id = Integer.parseInt(request.getParameter("id"));
+			Usuario u = new Usuario ();
+			
 			try {
-				DaoUsuario usuarios = new DaoUsuario();
+				u.obtenerPorID(id);
+				out.print(u.dameJson());
+				System.out.println(u.dameJson());
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}else if (opcion == 1) {
+			DaoUsuario usuarios;
+			try {
+				usuarios = new DaoUsuario();
 				out.print(usuarios.listarJson());
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		}else if(opcion == 2) {
-			int id = Integer.parseInt(request.getParameter("id"));
-			Usuario u = new Usuario();
-			try {
-				u.obtenerPorID(id);
-				out.print(u.dameJson());
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			
 		}else if(opcion == 3) {
+			int id = Integer.parseInt(request.getParameter("id"));
 			try {
-				int id = Integer.parseInt(request.getParameter("id"));
 				DaoUsuario usuarios = new DaoUsuario();
 				usuarios.borrarUsario(id);
 				System.out.println("Estoy borrando "+id);
@@ -67,13 +74,20 @@ public class GestionUsuario extends HttpServlet {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			
 		}
 		
 		
 		
 		
 		
-	}
+		}
+		
+		
+		
+		
+		
+	
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)

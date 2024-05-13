@@ -102,11 +102,12 @@ public class DaoUsuario {
 		PreparedStatement ps = con.prepareStatement(sql);
 		ps.setString(1, u.getNombre());
 		ps.setString(2, u.getApellido1());
-		ps.setString(2, u.getApellido2());
+		ps.setString(3, u.getApellido2());
 		ps.setInt(4, u.getTelefono());
 		ps.setInt(5, u.getTelefono());
 		ps.setString(6, u.getMail());
 		ps.setInt(7, u.getPermiso());
+		ps.setInt(8, u.getId());
 		
 		int filas = ps.executeUpdate();
 		ps.close();
