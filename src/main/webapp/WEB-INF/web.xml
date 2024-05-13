@@ -19,4 +19,14 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>GestionLibro</display-name>
+    <servlet-name>GestionLibro</servlet-name>
+    <servlet-class>controlador.GestionLibro</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GestionLibro</servlet-name>
+    <url-pattern>/GestionLibro</url-pattern>
+  </servlet-mapping>
 </web-app>
