@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/general.css">
+<link rel="stylesheet" href="css/formulario.css">
+</head>
+<script type="text/javascript">
+
+function listarReseñas(){
+    fetch('GestionReseña')
+    .then(response => response.json())
+    .then(data => pintarResultados(data));
+}
+
+function pintarResultados(datos){
+    let html = "<table border='1'>";
+    
+    html += "<tr>";
+    html += "<th>Título del Libro</th>";
+    html += "<th>Fecha de la Reseña</th>";
+    html += "<th>Calificación (1-5)</th>";
+    html += "<th>Reseña </th>";
+    html += "<th>Nombre usuario/a que realiza la reseña</th>";
+    html += "</tr>";
+    
+    for(let i = 0; i < datos.length; i++){
+        html += "<tr>";
+        html += "<td>" + datos[i].titulo + "</td>";
+        html += "<td>" + datos[i].fechaReseña + "</td>";
+        html += "<td>" + datos[i].calificacionReseña + "</td>";
+        html += "<td>" + datos[i].contenido + "</td>";
+        html += "<td>" + datos[i].nombreUsuario + "</td>";
+        html += "</tr>";
+    }
+    
+    html += "</table>";
+    
+    document.getElementById("resultados").innerHTML = html;
+}
+
+window.onload = function() {
+	listarReseñas();
+}
+
+</script>
+
+
+
+<body>
+   
+   <div class="contenedor">
+        <header class="header">
+            <h1>LIBRERÍA MI LIMÓN</h1>
+            <div class="img__back"></div>
+        </header>
+   
+    <h1>Lista de Reseñas</h1>
+    
+    <div id="resultados">
+    
+    </div>
+    
+    <footer class="footer">
+        <h4>FOOTER</h4>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat labore quod quibusdam enim, saepe, dolor 
+            maiores debitis maxime porro, deleniti nostrum! Sit distinctio eos magnam? Laborum qui 
+            assumenda aut quas.</p>
+    </footer>
+
+    </div>
+
+
+</body>
+</html>

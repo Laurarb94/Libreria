@@ -55,7 +55,7 @@ public class GestionReseña extends HttpServlet {
 		}
 		
 		
-		
+		response.sendRedirect("listarReseñas.html");
 		
 	}
 

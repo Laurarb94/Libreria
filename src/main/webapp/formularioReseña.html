@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reseñas e interacción autores y usuarios</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/formulario.css">
+  
+   <script type="text/javascript">
+ 
+ function llamada(id){
+		fetch('GestionReseña?idReseña='+idReseña)
+		.then(response => response.json())
+		.then(data => pintarFormulario(data))
+}
+
+ 
+
+ // Funcion para otener el valor de un parametro en el GET 
+ function getParameterByName(name) {
+		    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+		    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+		    results = regex.exec(location.search);
+		    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+	}
+		
+	function pintarFormulario(datos){
+		document.getElementById("idReseña").value = datos.IdReseña;
+		document.getElementById("nombre").value = datos.nombre;
+		document.getElementById("fechaReseña").value = datos.fechaReseña;
+		document.getElementById("calificacionReseña").value = datos.calificacionReseña;
+		document.getElementById("contenido").value = datos.contenido;
+		document.getElementById("nombreUsuario").value = datos.nombreUsuario;
+	}
+   		
+   		window.onload = function(){
+   			let id = getParameterByName("id");
+			llamada(id);
+		}
+ 
+    </script>
+  
+  
+  
+  
+</head>
+<body>
+    <div class="contenedor">
+        <header class="header">
+            <h1>LIBRERÍA MI LIMÓN</h1>
+            <div class="img__back"></div>
+        <!---- <img src="/prinicpal/fotos/logoLibLimon.png" alt="">  NO ME SALE. NO CONSIGO QUE ESTÉ DENTRO DEL HEADER-->
+        </header>
+    
+    
+    <div class="formulario">
+        <h4>Formulario de Reseñas</h4>
+    <form name = "reseña" action="GestionReseña" method="Post" id="altas">
+    <input type="hidden" id="idReseña" name="idReseña">
+    
+    <input class="control" type="text" name="titulo" id="titulo" placeholder="Introduce el título del libro" required>
+    <input class="control" type="date" name="fechaReseña" id="fechaReseña" placeholder="Introduce la fecha de hoy" required>
+    <textarea class="control" id="contenido" name="contenido" cols="30" rows="10"></textarea><br>
+    <label for="calificación">Califica de 1 a 5 el libro, siendo 1 la nota más baja y 5 la más alta</label>
+    <input class="control" type="number" name="calificacionReseña" id="calificacionReseña" min="1" max="5" required>
+    <input class="control" type="text" name="nombreUsuario" id="nombreSusario" placeholder="Escribe tu nombre" required>
+    <input type="submit" value="enviar reseña">
+    </form> 
+    </div>
+
+    <footer class="footer">
+        <h4>FOOTER</h4>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat labore quod quibusdam enim, saepe, dolor 
+            maiores debitis maxime porro, deleniti nostrum! Sit distinctio eos magnam? Laborum qui 
+            assumenda aut quas.</p>
+    </footer>
+    </div>
+</body>
+</html>
