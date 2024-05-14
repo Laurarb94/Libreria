@@ -28,8 +28,8 @@ import dao.DaoLibro;
 public class GestionLibro extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-	private String pathFiles = "C:\\Documentos eclipse web\\Libreria\\src\\main\\webapp\\portada";
-	private File uploads = new File (pathFiles);
+	private String pathFiles = "C:\\Documentos eclipse web\\Libreria\\src\\main\\webapp\\Image";
+	private File upload = new File (pathFiles);
 	
 	
     /**
@@ -106,18 +106,20 @@ public class GestionLibro extends HttpServlet {
         
         //Primero hago la lectura en origen
         Part part = request.getPart("fotoPortada"); //me da los datos de la foto
-		Path path = Paths.get(part.getSubmittedFileName()); //esto me da el nombre de archivo original
+        Path path = Paths.get(part.getSubmittedFileName()); //esto me da el nombre de archivo original
 		String fileName = path.getFileName().toString();
-        
+		
 		//Ya tengo la lectura en origen. Ahora hacemos el camnio a destino
 		InputStream input = part.getInputStream();
-	
-		File file = new File(uploads, fileName);
 		
+		//Creo el contenedor
+		File file = new File(upload, fileName);
+			
 		//Ya tenemos el origen y el camino. Queda meter lo que contenga esa lectura 
 		//dentro del contenedor que hemos creado
 		try {
 			Files.copy(input, file.toPath());
+			System.out.println("Ruta de la imagen: "+file.getAbsolutePath());
 		}catch (Exception e) {
 			System.out.println("Error al copiar el archivo" +e.getMessage());
 			e.printStackTrace();

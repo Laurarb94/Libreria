@@ -16,7 +16,6 @@ function llamada(id, op){
 	}
 		
 	function pintarFormulario(datos){
-		//Te ha costado tanto porque ponías el id aquí también. NO LO PONGAS. SI TIENES QUE PONERLO, BUSCA POR QUÉ NO FUNCIONA
 		document.getElementById("id").value = datos.id;
 		document.getElementById("nombre").value = datos.nombre;
 		document.getElementById("apellido1").value = datos.apellido1;
