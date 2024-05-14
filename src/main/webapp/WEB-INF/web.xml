@@ -29,4 +29,14 @@
     <servlet-name>GestionLibro</servlet-name>
     <url-pattern>/GestionLibro</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>GestionReseña</display-name>
+    <servlet-name>GestionReseña</servlet-name>
+    <servlet-class>controlador.GestionReseña</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GestionReseña</servlet-name>
+    <url-pattern>/GestionReseña</url-pattern>
+  </servlet-mapping>
 </web-app>
