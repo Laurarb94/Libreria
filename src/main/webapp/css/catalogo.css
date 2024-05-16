@@ -1,24 +1,32 @@
-.libro{
-	display: flex;
-	margin-bottom: 20px;
-	padding: 10px;
-	background-color: #f9f9f9;
+.libro-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
 }
 
-.detalles {
-	flex: 1;
-	padding-left: 20px;
+.libro-imagen img {
+    margin-right: 20px;
 }
 
-.acciones {
-	flex: 0 0 100px; /**ancho fijo de las acciones**/
-	display: flex;
-	flex-direccion: column; 
-	justify-content: space-between;
+.libro-detalles {
+    display: flex;
+    flex-direction: column;
 }
 
-.acciones a{
-	margin-bottom: 10px;
-	
+.libro-detalles p {
+    margin: 5px 0;
 }
 
+.libro-detalles a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.libro-detalles a:hover {
+    text-decoration: underline;
+}

@@ -51,7 +51,7 @@ public class GestionLibro extends HttpServlet {
 		
 		if(opcion == 2) {
 			//lógica de edicion
-			int idLibro = Integer.parseInt(request.getParameter("id"));
+			int idLibro = Integer.parseInt(request.getParameter("idLibro"));
 			Libro l = new Libro();
 			
 			try {
@@ -114,12 +114,17 @@ public class GestionLibro extends HttpServlet {
 		
 		//Creo el contenedor
 		File file = new File(upload, fileName);
+		
 			
 		//Ya tenemos el origen y el camino. Queda meter lo que contenga esa lectura 
 		//dentro del contenedor que hemos creado
 		try {
-			Files.copy(input, file.toPath());
+		/*	Esto es lo de Antonio, pruebo con sara otra forma 
+		 * Files.copy(input, file.toPath());
 			System.out.println("Ruta de la imagen: "+file.getAbsolutePath());
+			
+			*LA PUTA RUTA NO SALE BIEN!
+			*/
 		}catch (Exception e) {
 			System.out.println("Error al copiar el archivo" +e.getMessage());
 			e.printStackTrace();
