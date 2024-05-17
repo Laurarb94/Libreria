@@ -119,12 +119,9 @@ public class GestionLibro extends HttpServlet {
 		//Ya tenemos el origen y el camino. Queda meter lo que contenga esa lectura 
 		//dentro del contenedor que hemos creado
 		try {
-		/*	Esto es lo de Antonio, pruebo con sara otra forma 
-		 * Files.copy(input, file.toPath());
+		    Files.copy(input, file.toPath());
 			System.out.println("Ruta de la imagen: "+file.getAbsolutePath());
 			
-			*LA PUTA RUTA NO SALE BIEN!
-			*/
 		}catch (Exception e) {
 			System.out.println("Error al copiar el archivo" +e.getMessage());
 			e.printStackTrace();
