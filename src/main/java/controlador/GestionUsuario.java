@@ -5,6 +5,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import modelo.Usuario;
 
 import java.io.IOException;
@@ -20,6 +21,7 @@ import dao.DaoUsuario;
  */
 public class GestionUsuario extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	HttpSession sesion;
        
     /**
      * @see HttpServlet#HttpServlet()
