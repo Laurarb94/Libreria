@@ -36,6 +36,13 @@ public class GestionUsuario extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		sesion = request.getSession();
+		
+	//	int idSesion = Integer.parseInt((String)sesion.getAttribute("id")); //esto lo recupero del servlet Login que es lo que estoy guardando
+		int idSesion = (int) sesion.getAttribute("id");
+		
+		if(idSesion !=0) { //si idSesion es distinto a 0 es un usuario registrado
+		
 		PrintWriter out = response.getWriter();
 		
 		int opcion = Integer.parseInt(request.getParameter("op"));
@@ -77,6 +84,11 @@ public class GestionUsuario extends HttpServlet {
 				e.printStackTrace();
 			}
 			
+		}
+		
+		}else {
+			System.out.println("No puedes entrar");
+			response.sendRedirect("formLogIn.html");
 		}
 		
 		

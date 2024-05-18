@@ -174,4 +174,26 @@ public class Usuario {
 		DaoUsuario.getInstance().borrarUsario(id);
 	}
 	
+
+	public boolean logueo(String password) throws SQLException {
+		boolean ok = false;
+		DaoUsuario dao = new DaoUsuario();
+		Usuario aux = dao.logueando(this, password); //este es el que va a bbdd
+		
+		if(aux != null) {
+			ok = true;
+			this.setId(aux.getId());
+			this.setNombre(aux.getNombre());
+			this.setApellido1(aux.getApellido1());
+			this.setApellido2(aux.getApellido2());
+			this.setTelefono(aux.getTelefono());
+			this.setCodPostal(aux.getCodPostal());
+			this.setMail(aux.getMail());
+			this.setPermiso(aux.getPermiso());
+		}
+		
+		return ok;
+	}
+
+
 }

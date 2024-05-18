@@ -1,1 +1,54 @@
-@charset "ISO-8859-1";
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.buscar{
+    position: absolute;
+    padding: 5px;
+
+}
+
+.buscar input{
+    width: 240px;
+    height: 40px;
+    margin-top: 5%;
+    padding: 0 20px;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 50px;
+}
+
+.buscar button{
+    width: 80px;
+    height: 30px;
+    border-radius: 10%;   
+    background-color: aliceblue;
+}
+
+.buscar button:hover{
+    background-color: rgb(223, 236, 169);
+}
+
+.article h2{
+    margin-top: 15%;
+}
+
+.article li{
+    list-style: none;
+}
+
+.article li:hover{
+    color: brown;
+}
+
+.sidebar{
+    margin-top: 10%;
+}
+
+.sidebar a{
+    margin-top: 20px;
+    text-decoration: none;
+    color: brown;
+    font-size: large;
+}
