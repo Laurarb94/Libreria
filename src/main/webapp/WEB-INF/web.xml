@@ -49,4 +49,14 @@
     <servlet-name>Login</servlet-name>
     <url-pattern>/Login</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CierreSesion</display-name>
+    <servlet-name>CierreSesion</servlet-name>
+    <servlet-class>controlador.CierreSesion</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CierreSesion</servlet-name>
+    <url-pattern>/CierreSesion</url-pattern>
+  </servlet-mapping>
 </web-app>

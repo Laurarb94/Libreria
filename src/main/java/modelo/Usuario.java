@@ -174,7 +174,7 @@ public class Usuario {
 		DaoUsuario.getInstance().borrarUsario(id);
 	}
 	
-
+	
 	public boolean logueo(String password) throws SQLException {
 		boolean ok = false;
 		DaoUsuario dao = new DaoUsuario();
@@ -194,6 +194,5 @@ public class Usuario {
 		
 		return ok;
 	}
-
 
 }

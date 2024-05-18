@@ -113,6 +113,7 @@ public class DaoUsuario {
 		ps.close();
 	}
 	
+	
 	public Usuario logueando(Usuario u, String password) throws SQLException {
 		String sql = "SELECT * FROM usuario WHERE mail=? AND password=?";
 		PreparedStatement ps = con.prepareStatement(sql);
@@ -120,19 +121,33 @@ public class DaoUsuario {
 		ps.setString(2, password);
 	
 		ResultSet rs = ps.executeQuery();
-		rs.next();
-		
-		Usuario aux = new Usuario (rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), 
+		Usuario aux = null;
+		//meto el if porque si no, al meter un usuario que no está registrado me da error porque me dice que el ResutSet está vacío
+		if(rs.next()) {
+			aux = new Usuario  (rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), 
 					rs.getInt(5), rs.getInt(6), rs.getString(7), rs.getInt(8), rs.getString(9)); 
+		}
 		
+		ps.close();
 		
 		return aux;
+		
+		
+		}
+		
+		
+		
+		
 		
 	}
 	
 	
+		
+		
+	
+	
+	
 
-}
 
 	
 

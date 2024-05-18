@@ -55,7 +55,11 @@ public class Login extends HttpServlet {
 				sesion.setAttribute("id", u.getId());
 				sesion.setAttribute("permiso", u.getPermiso());
 				
-				response.sendRedirect("pagPrincipalUsuario.html");
+				if(u.getPermiso() == 9) { //Si eres = 9 eres admin
+					response.sendRedirect("pagPrincipalAdmin.html");
+				}else if (u.getPermiso() <9){ //si eres menor que 9 eres usuario
+					response.sendRedirect("pagPrincipalUsuario.html");
+				}
 			}else {
 				response.sendRedirect("formLogIn.html");
 			}
