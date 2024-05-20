@@ -4,43 +4,68 @@
 <meta charset="UTF-8">
 <title>Catálogo Librería Mi Limón</title>
 <link rel="stylesheet" href="css/general.css">
-<link rel="stylesheet" href="css/formulario.css">
-<link rel="stylesheet" href="css/admin.css">
 <link rel="stylesheet" href="css/catalogo.css">
 <script src="catalogoListarLibro.js"></script>
 </head>
 <body>
 
-<div class="contenedor">
-        <header class="header">
-            <h1>LIBRERÍA MI LIMÓN</h1>
-            <div class="img__back"></div>
-        </header>
-      
-        <h2>CATÁLOGO DE LIBROS</h2>
-        
-        <div id="cajaFotoGrande">
-           <img src = "" id= "fotoGrande" alt = "Portada del Libro Grande">
-        </div>
-        
-        <div id="cajaFotosPeques">
-           
-        </div>
-        
-        <div id = "cajaBotones">
-           <img src="img/flechaDerecha.PNG" id="flechaDerecha" alt = "Flecha Derecha">
-           <img src="img/Izquierda.PNG" id="flechaIzquierda" alt = "Flecha Izquierda">
-        </div>        
-        
-        <div id="resultados" class="contenedorLibros"></div>
+	<div class="contenedor">
+		<header class="header">
+			<h1>LIBRERÍA MI LIMÓN</h1>
+			<div class="img__back"></div>
+		</header>
 
-<footer class="footer">
-        <h4>FOOTER</h4>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat labore quod quibusdam enim, saepe, dolor 
-            maiores debitis maxime porro, deleniti nostrum! Sit distinctio eos magnam? Laborum qui 
-            assumenda aut quas.</p>
-    </footer>
-    </div>
+		<div class="contenedor-menu">
+
+			<div class="menu">
+				<a href="principal.html">Página principal</a>
+			</div>
+
+			<div class="menu">
+				<a href="listarResenia.html">Reseñas Librería Mi Limón</a>
+			</div>
+
+			<div class="menu">
+				<a href="formLogIn.html">LOG IN</a>
+			</div>
+
+		</div>
+
+
+		<div id="libroSeleccionado" class="libro-seleccionado">
+
+			<img src="" id="fotoGrande" alt="Portada del Libro Grande">
+
+			<div id="infoLibro">
+				<p id="tituloLibro">
+					<strong>Título: </strong>
+				</p>
+				<p id="autorLibro">Autor/a:</p>
+				<p id="generoLibro">Género:</p>
+				<p id="psinopsisLibro">Psinopsis:</p>
+			</div>
+
+		</div>
+
+		<div id="cajaBotones">
+			<button id="flechaIzquierda">←</button>
+			<button id="flechaDerecha">→</button>
+		</div>
+
+
+		<div id="cajaFotosPeques" class="cajaFotosPeques"></div>
+
+
+		<div id="resultados" class="contenedorLibros"></div>
+
+		<footer class="footer">
+			<h4>FOOTER</h4>
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+				Placeat labore quod quibusdam enim, saepe, dolor maiores debitis
+				maxime porro, deleniti nostrum! Sit distinctio eos magnam? Laborum
+				qui assumenda aut quas.</p>
+		</footer>
+	</div>
 
 </body>
 </html>

@@ -1,32 +1,100 @@
-.libro-item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 8px;
-    background-color: #f9f9f9;
+
+.title h1{
+    padding: 20px 0;
+    text-align: center;
+    font-size: 2.9em;
 }
 
-.libro-imagen img {
+.contenedor-menu {
+	display: flex; /*flex para que estén todos en horizontal, en una fila*/
+	justify-content: space-around; /*espacio entre los elementos*/
+	align-items: center;
+	paddin: 20px;
+	margin-botom: 30px;
+	margin-top: 10px;
+}
+
+.menu{
+    border: 1px solid black;
+    width: 300px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #000;
+}
+
+
+
+.menu:hover{
+    background-color: rgb(223, 236, 169);
+}
+
+/* Estilos para el contenedor de la imagen grande y la información del libro */
+.libro-seleccionado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.libro-seleccionado img {
+   /* max-width: 300px;*/
     margin-right: 20px;
 }
 
-.libro-detalles {
+#infoLibro {
+    max-width: 600px;
+}
+
+#infoLibro p {
+    margin: 10px 0;
+}
+
+/* Estilos para el contenedor de las miniaturas */
+.cajaFotosPeques {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
-.libro-detalles p {
-    margin: 5px 0;
+.cajaFotosPeques img {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s;
 }
 
-.libro-detalles a {
-    margin-right: 10px;
-    text-decoration: none;
-    color: #007BFF;
+.cajaFotosPeques img:hover {
+    transform: scale(1.1);
 }
 
-.libro-detalles a:hover {
-    text-decoration: underline;
+/* Estilos para los botones de navegación */
+#cajaBotones {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
+
+#cajaBotones button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+}
+
+#cajaBotones button:hover {
+    background-color: #45a049;
+}
+
