@@ -1,168 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="css/general.css">
 <link rel="stylesheet" href="css/resenia.css">
+<script src="listarResenia.js"></script>
 
 </head>
 
-<script type="text/javascript">
-
-function llamada(){
-	fetch('GestionResenia?op=1')
-	.then(response => response.json())
-	.then(data => pintarTabla(data))
-	
-}
-
-function borrar(id){
-	
-	if(confirm("Seguro que quieres borrar")){
-		fetch('GestionResenia?id='+id+'&op=2')
-		.then(response => response.json())
-		.then(data => pintarTabla(data))
-	}else{
-		
-	}
-}
-
-
-function pintarTabla(datos){
-    let contenedor = document.getElementById("listado");
-    contenedor.innerHTML = ""; // Limpiamos el contenido anterior
-    
-    for(let i = 0; i < datos.length; i++){    
-        let cuadrado = document.createElement("div");
-        cuadrado.classList.add("cuadrado");
-        
-        let nombreLibro = document.createElement("div");
-        nombreLibro.classList.add("nombre-libro");
-        nombreLibro.textContent = "Título del libro: " + datos[i].titulo;
-        
-        let fecha = document.createElement("div");
-        fecha.classList.add("fecha");
-        fecha.textContent = "Fecha de la reseña: " + datos[i].fecha;
-        
-        let calificacion = document.createElement ("div");
-        calificacion.classList.add("calificacion");
-        calificacion.textContent = "Calificación del libro: " +datos[i].calificacion;
-        
-        let contenido = document.createElement ("div");
-        contenido.classList.add("contenido");
-        contenido.textContent = "Reseña: " +datos[i].contenido;
-        
-        let nombreUsuario = document.createElement ("div");
-        nombreUsuario.classList.add("nombre-usuario");
-        nombreUsuario.textContent = "Nombre del usuario: " +datos[i].nombreEscribeResenia;
-        
-        let borrar = document.createElement ("div");
-        let enlaceBorrar = document.createElement ("a");
-        enlaceBorrar.textContent = "Borrar";
-        enlaceBorrar.href = "#";
-        enlaceBorrar.addEventListener("click", function(){
-        	borrar(datos[i].id);
-        })
-        borrar.appendChild(enlaceBorrar);
-        
-        
-        cuadrado.appendChild(nombreLibro);
-        cuadrado.appendChild(fecha);
-        cuadrado.appendChild(calificacion);
-        cuadrado.appendChild(contenido);
-        cuadrado.appendChild(nombreUsuario);
-        cuadrado.appendChild(borrar);
-        
-        contenedor.appendChild(cuadrado);
-    }
-}
-
-
-
-
-
-/*
- * 
- 
- 
- function pintarTabla(datos){
-		
-		let html = "<div class='cuadrado'>";
-			
-		for(let i=0;i<datos.length;i++){	
-						
-				html +="<div><strong>Nombre del libro: </strong>"+datos[i].titulo+"</div>";
-				html +="<div>Fecha de la reseña: "+datos[i].fecha+"</div>";
-				
-				html +="<div> Calificación del libro: "+datos[i].calificacion+"</div>";
-				
-				html +="<div>Reseña: "+datos[i].contenido+"</div>";
-		
-				html += "<div>"+datos[i].nombreEscribeResenia+"</div>";			
-				html += "<div><a href='javascript:borrar("+datos[i].id+")'>Borrar</a></div>";
-				html +="<hr>";
-		}
-		
-		html +="</div>";
-
-		document.getElementById("listado").innerHTML = html;
-
-			
-	}
-	
- 
- 
- */
-
-
-
-
-window.onload = function() {
-
-    	llamada();
-}
-
-    </script>
-    
 <body>
-   
-   <div class="contenedor">
-        <header class="header">
-            <h1>LIBRERÍA MI LIMÓN</h1>
-            <div class="img__back"></div>
-        </header>
-   
-    <h1>RESEÑAS</h1>
-    
-    <div id="listado">
-     
-       <div class="contenedor-cuadrado">
-       
-       <div class="cuadrado">
-          <div class="nombre-libro"></div>
-          <div class="fecha"></div>
-          <div class="calificacion"></div>
-          <div class="contenido"></div>
-          <div class="nombre-usuario"></div>
-          <div class="borrar"></div>
-       
-       
-       </div>
-       
-       
-       </div>
-    
-    </div>
-    
-    <footer class="footer">
-        <h4>FOOTER</h4>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat labore quod quibusdam enim, saepe, dolor 
-            maiores debitis maxime porro, deleniti nostrum! Sit distinctio eos magnam? Laborum qui 
-            assumenda aut quas.</p>
-    </footer>
 
-    </div>
+	<div class="contenedor">
+		<header class="header">
+			<h1>LIBRERÃA MI LIMÃ“N</h1>
+			<div class="img__back"></div>
+		</header>
+
+		<h1>RESEÃ‘AS</h1>
+
+		<div id="listado" class="contenedor-cuadrado">
+
+			
+
+				<div class="cuadrado">
+					<div class="nombre-libro"></div>
+					<div class="fecha"></div>
+					<div class="calificacion"></div>
+					<div class="contenido"></div>
+					<div class="nombre-usuario"></div>
+					<div class="borrar"></div>
+
+
+			</div>
+
+		</div>
+
+		<footer class="footer">
+			<h4>FOOTER</h4>
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+				Placeat labore quod quibusdam enim, saepe, dolor maiores debitis
+				maxime porro, deleniti nostrum! Sit distinctio eos magnam? Laborum
+				qui assumenda aut quas.</p>
+		</footer>
+
+	</div>
 
 
 </body>

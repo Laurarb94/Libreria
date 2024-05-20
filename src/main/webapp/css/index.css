@@ -3,40 +3,27 @@
     margin: 0;
 }
 
-body{
-    background-color: #eee;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+body {
+	background-color: #eee;
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.title h1{
-    padding: 20px 0;
-    text-align: center;
-    font-size: 2.9em;
+.contenedor-menu {
+	display: flex; /*flex para que estén todos en horizontal, en una fila*/
+	justify-content: space-around; /*espacio entre los elementos*/
+	align-items: center;
+	paddin: 20px;
+	margin-botom: 30px;
+	margin-top: 10px;
 }
-
-.contenedor{
-    /*background-color: ivory;
-    width: 90%;
-    margin: 0 auto;
-    padding: 0 10px;
-    margin-bottom: 10px;
-    /*max-width: 100%;*/
-    
-    display: grid; /*Organizo los elementos que están dentro de este div de contenido*/
-    gap: 1.6em; /*añade espacio entre los distintos contenidos*/
-    grid-template-columns: repeat(3, 1fr);
-
-}
-
-.contenedor > .div{
-    background-color: #fff;
-    padding: 20px;
-    /*border: 1px solid black;*/
-}
-
 
 .menu{
     border: 1px solid black;
+    width: 300px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu a{
@@ -44,27 +31,42 @@ body{
     color: #000;
 }
 
+
+
 .menu:hover{
     background-color: rgb(223, 236, 169);
 }
 
-.contenedor > .contenido {
-    grid-column: 1/3;
+main {
+	display: flex;
+	justify-content: space-betwee; /*distribuye los dos párrafos*/
+	align-items: flex-start; /*Alinéa los dos párrafos al inicio*/
+	paddin: 20px;
+	margin-botom: 50px;
+	margin-top: 10px;
+	gaap: 20px; /*Espacio entre los dos articles.*/
 }
 
-.contenedor > .sidebar{
-    grid-column: span 2;
+main article {
+	flex: 1; /*Para que cada article tome el mismo espacio*/
+	padding: 10px; /*este es el espacio interno de los article!*/
+	text-align: justify;
+	
 }
 
-.sidebar div{
-    background-color: antiquewhite;
-    padding: 30px;/*Separo los dos párrafos*/
+.sidebar{
+    padding: 30px; /*Separo los dos párrafos*/
+    margin-top: 30px;
+    margin-bottom: 30px;
     margin: 0;
     text-align: justify;
+    border: 2px solid black; 
+    box-sizing: border-box; /*con esto se asegura que el padding y los bordes se incluyan en el tamaño total del elemento para que el borde no aumente 
+    el tamaño total del elemento más allá de lo que se ha especificado.*/
 }
 
-.sidebar div a{
-    text-decoration: dotted;
+.sidebar a{
+	text-decoration: dotted;
 }
 
 
