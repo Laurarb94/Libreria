@@ -59,4 +59,24 @@
     <servlet-name>CierreSesion</servlet-name>
     <url-pattern>/CierreSesion</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>BorrarReseña</display-name>
+    <servlet-name>BorrarReseña</servlet-name>
+    <servlet-class>controlador.BorrarReseña</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BorrarReseña</servlet-name>
+    <url-pattern>/BorrarReseña</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>GestionResenia</display-name>
+    <servlet-name>GestionResenia</servlet-name>
+    <servlet-class>controlador.GestionResenia</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GestionResenia</servlet-name>
+    <url-pattern>/GestionResenia</url-pattern>
+  </servlet-mapping>
 </web-app>

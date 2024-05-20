@@ -10,7 +10,7 @@
    <script type="text/javascript">
  
  function llamada(id){
-		fetch('GestionReseña?idReseña='+idReseña)
+		fetch('GestionReseña?idResenia='+id)
 		.then(response => response.json())
 		.then(data => pintarFormulario(data))
 }
@@ -26,12 +26,12 @@
 	}
 		
 	function pintarFormulario(datos){
-		document.getElementById("idReseña").value = datos.IdReseña;
-		document.getElementById("nombre").value = datos.nombre;
-		document.getElementById("fechaReseña").value = datos.fechaReseña;
-		document.getElementById("calificacionReseña").value = datos.calificacionReseña;
+		document.getElementById("id").value = datos.IdReseña;
+		document.getElementById("titulo").value = datos.nombre;
+		document.getElementById("fecha").value = datos.fechaReseña;
+		document.getElementById("calificacion").value = datos.calificacionReseña;
 		document.getElementById("contenido").value = datos.contenido;
-		document.getElementById("nombreUsuario").value = datos.nombreUsuario;
+		document.getElementById("nombreEscribeResenia").value = datos.nombreUsuario;
 	}
    		
    		window.onload = function(){
@@ -56,15 +56,15 @@
     
     <div class="formulario">
         <h4>Formulario de Reseñas</h4>
-    <form name = "reseña" action="GestionReseña" method="Post" id="altas">
-    <input type="hidden" id="idReseña" name="idReseña">
+    <form name = "reseña" action="GestionResenia" method="Post" id="altas">
+    <input type="hidden" id="id" name="id">
     
     <input class="control" type="text" name="titulo" id="titulo" placeholder="Introduce el título del libro" required>
-    <input class="control" type="date" name="fechaReseña" id="fechaReseña" placeholder="Introduce la fecha de hoy" required>
+    <input class="control" type="date" name="fecha" id="fecha" placeholder="Introduce la fecha de hoy" required>
     <textarea class="control" id="contenido" name="contenido" cols="30" rows="10"></textarea><br>
     <label for="calificación">Califica de 1 a 5 el libro, siendo 1 la nota más baja y 5 la más alta</label>
-    <input class="control" type="number" name="calificacionReseña" id="calificacionReseña" min="1" max="5" required>
-    <input class="control" type="text" name="nombreUsuario" id="nombreSusario" placeholder="Escribe tu nombre" required>
+    <input class="control" type="number" name="calificacion" id="calificacion" min="1" max="5" required>
+    <input class="control" type="text" name="nombreEscribeResenia" id="nombreEscribeResenia" placeholder="Escribe tu nombre" required>
     <input type="submit" value="enviar reseña">
     </form> 
     </div>

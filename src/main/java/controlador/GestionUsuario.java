@@ -117,10 +117,10 @@ public class GestionUsuario extends HttpServlet {
 		
 		sesion = request.getSession(false); //previene la creación de una nueva sesión si no existe una
 		
-		if(sesion !=null) {
-			Object permisoObj = sesion.getAttribute("permiso");
+	//	if(sesion !=null) {
+		//	Object permisoObj = sesion.getAttribute("permiso");
 			
-			if(permisoObj instanceof Integer && (Integer) permisoObj == 9) {
+		//	if(permisoObj instanceof Integer && (Integer) permisoObj == 9) {
 				
 				
 				String nombre = request.getParameter("nombre");
@@ -141,41 +141,47 @@ public class GestionUsuario extends HttpServlet {
 
 				
 				Usuario u; 
-				 try {
-					 u = new Usuario (nombre, apellido1, apellido2, telefono, codPostal, mail, permiso, password);
-					 if(id == null|| id.trim().isEmpty()) {
-						 DaoUsuario.getInstance().insertarUsuario(u);
-					 }else {
-						 int idInt = Integer.parseInt(id);
-						 u.setId(idInt);
-						 u.actualizar();
-					 }
-					  
-				 }catch (SQLException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
+				try {
+					u = new Usuario (nombre, apellido1, apellido2, telefono, codPostal, mail, permiso, password);
 					
+					if(id == null|| id.trim().isEmpty()) {
+						DaoUsuario.getInstance().insertarUsuario(u);
+						response.sendRedirect("pagPrincipalUsuario.html");
+						
+					}else {
+						if(sesion !=null) {
+							
+							Object permisoObj = sesion.getAttribute("permiso");
+							if (permisoObj instanceof Integer && (Integer) permisoObj == 9) {
+
+								int idInt = Integer.parseInt(id);
+								u.setId(idInt);
+								u.actualizar();
+								
+								response.sendRedirect("listarUsuario.html");
+							}
+						}
+					}
+				}catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+
+			//	response.sendRedirect("listarUsuario.html");
+
+
 				
-					response.sendRedirect("listarUsuario.html");
 				
-				
-				
-				
-			}else {
+		/*	}else {
 				System.out.println("No tienes permiso para acceder");
 				response.sendRedirect("formLogIn.html");
-			}
+			}*/
 			
-		}else {
-			System.out.println("No tienes permiso para acceder");
-			response.sendRedirect("formLogIn.html");
 		}
-		
-		
 		
 		
 		
 	}
 
-}
+

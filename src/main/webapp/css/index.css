@@ -28,41 +28,13 @@ body{
 
 }
 
-/*.contenedor > .header, */
-.contenedor > .menu,
-.contenedor > .contenido, 
-.contenedor > .sidebar,
-/*.contenedor > .footer, */
 .contenedor > .div{
     background-color: #fff;
     padding: 20px;
     /*border: 1px solid black;*/
 }
 
-/*.contenedor .header,  
-.contenedor .footer {
-    grid-column: 1/6; /*le estoy diciendo que el header y el footer ocupen desde la línea 1 a la 6, que ocupen todo
-    background-color: rgb(198, 235, 238);
-    color: black;
-    height: 90px;
-} */
 
-/*
-.contenedor .header h1{
-    text-align: center;
-    margin-top: 10px;
-
-}
-
-.contenedor .header{
-    background-image: url(/prinicpal/fotos/limonesPortada.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 90px;
-    color: black;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-*/
 .menu{
     border: 1px solid black;
 }
