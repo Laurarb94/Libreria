@@ -72,6 +72,35 @@ public class DaoLibro {
 			return json;
 		}
 		
+		
+		/**
+		 * Metodo listar que retorno los libros con el filtrado de tipo
+		 * @param tipo
+		 * @return
+		 * @throws SQLException
+		 */
+		public ArrayList<Libro>listarLibros (String tipo) throws SQLException{
+			
+			ArrayList<Libro> result = new ArrayList<Libro>();
+			
+			PreparedStatement ps = con.prepareStatement("SELECT * FROM libros WHERE generoLibro=?");
+			ps.setString(1, tipo);
+			ResultSet rs = ps.executeQuery();
+		//	ps.setString(1, tipo);
+			
+		//esto es como lo tiene Antonio	ArrayList<Libro> result = null;
+			
+			while (rs.next()) {
+				
+				if(result == null) {
+					result = new ArrayList<Libro>();				
+				}
+				result.add(new Libro(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), 
+						rs.getString(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9)));		
+			}	
+			return result;
+		}
+		
 	
 	public Libro obtenerPorId(int idLibro) throws SQLException {
 		String sql = "SELECT * FROM libros WHERE idLibro =?";
@@ -87,6 +116,19 @@ public class DaoLibro {
 		
 		return l; 	
 	}
+	
+	
+	public String listarJson(String tipo) throws SQLException {
+		String json = "";
+		Gson gson = new Gson();
+		json = gson.toJson(this.listarLibros(tipo));
+		return json;
+	}
+	
+	
+	
+	
+	
 	
 	public void actualizar (Libro l) throws SQLException {
 		String sql = "UPDATE libros SET isbn=?, tituloLibro=?, nombreAutorLibro=?, apellido1AutorLibro=?, "

@@ -7,55 +7,78 @@
 <link rel="stylesheet" href="css/general.css">
 <link rel="stylesheet" href="css/index.css">
 <link rel="stylesheet" href="css/indexUsuario.css">
+<script src="busquedaLibro.js"></script>
 </head>
 <body>
-    <div class="contenedor">
-        <header class="header">
-            <h1>LIBRERÍA MI LIMÓN</h1>
-        </header>
+	<div class="contenedor">
+		<header class="header">
+			<h1>LIBRERÍA MI LIMÓN</h1>
+		</header>
 
-        <div class="contenedor-menu">
-            <div class="menu">
-                <a href="listarResenia.html">Reseñas de usuarios y autores</a>
-            </div>
-            <div class="menu">
-                <a href="catalogo.html">Catálogo de Libros</a>
-            </div>
-            <div class="menu">
-                <a href="logout">LOG OUT</a>
-            </div>
-        </div>
+		<div class="contenedor-menu">
+			<div class="menu">
+				<a href="listarResenia.html">Reseñas de usuarios y autores</a>
+			</div>
+			<div class="menu">
+				<a href="catalogo.html">Catálogo de Libros</a>
+			</div>
+			<div class="menu">
+				<a href="logout">LOG OUT</a>
+			</div>
+		</div>
 
-        <div class="contenido">
-            <div class="contenedor-superior">
-                <div class="listas">
-                    <h2>Mis Libros:</h2>
-                    <li>Libros que he leído y me han gustado</li>
-                    <li>Libros que he leído y no me han gustado</li>
-                    <li>Libros pendientes</li>
-                </div>
+		<div class="contenido">
+			<div class="contenedor-superior">
 
-                <div class="buscador">
-                    <h2>Barra de búsqueda</h2>
-                    <p>En este espacio podrás buscar los libros que más te gusten y te interesen, sólo tienes que ingresar el nombre en el buscador para ver si está en nuestra base de datos y comenzar a leer!</p>
-                    <div class="buscar">
-                        <input type="text" placeholder="¿Qué libro te apetece leer...?" required>
-                        <button type="submit">buscar</button>
-                    </div>
-                </div>
-            </div>
+				<div class="buscador">
+					<h2>Búsqueda de libros</h2>
+					<p>En este espacio podrás buscar los libros que más te gusten y
+						te interesen, sólo tienes que ingresar el nombre en el buscador
+						para ver si está en nuestra base de datos y comenzar a leer!</p>
+					<div class="buscar">
 
-            <div class="resenia">
-                <h2>Formulario de reseñas</h2>
-                <p>En este apartado podrás escribir tus reseñas y calificar los libros de la Libría Mi Limón. Anímate a ser parte de nuestra familia compartiendo, con otros usuarios y usuarias y con los autores y autoras tus pensamientos y opiniones sobre los libros que has leído!</p>
-                <a href="formularioResenia.html">Escribe tu reseña aquí!!</a>
-            </div>
-        </div>
+						<form name="Listado" method="get" action="GestioLibro?op=1&op=4">
 
-        <footer class="footer">
-            <h4>FOOTER</h4>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat labore quod quibusdam enim, saepe, dolor maiores debitis maxime porro, deleniti nostrum! Sit distinctio eos magnam? Laborum qui assumenda aut quas.</p>
-        </footer>
-    </div>
+							<select name="tipoLibro" onchange="buscarPorTipo(this.value)">
+								<option value="0">...</option>
+								<option value="Novela">Novela</option>
+								<option value="Cómic">Cómic</option>
+								<option value="Ensayo feminista">Ensayo feminista</option>
+								<option value="Poesía">Poesía</option>
+								<option value="Novela negra">novela negra</option>
+
+							</select>
+
+						</form>
+
+						<ul id="listaLibros" class="lista-libros"></ul>
+
+					</div>
+				</div>
+
+				<div class="resenia">
+					<h2>Formulario de reseñas</h2>
+					<p>En este apartado podrás escribir tus reseñas y calificar los
+						libros de la Libría Mi Limón. Anímate a ser parte de nuestra
+						familia compartiendo, con otros usuarios y usuarias y con los
+						autores y autoras tus pensamientos y opiniones sobre los libros
+						que has leído!</p>
+					<a href="formularioResenia.html">Escribe tu reseña aquí!!</a>
+				</div>
+
+
+			</div>
+
+
+		</div>
+
+		<footer class="footer">
+			<h4>FOOTER</h4>
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+				Placeat labore quod quibusdam enim, saepe, dolor maiores debitis
+				maxime porro, deleniti nostrum! Sit distinctio eos magnam? Laborum
+				qui assumenda aut quas.</p>
+		</footer>
+	</div>
 </body>
 </html>

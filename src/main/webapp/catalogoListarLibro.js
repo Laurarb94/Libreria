@@ -38,7 +38,7 @@ window.addEventListener("DOMContentLoaded", function() {
                 .then(response => response.json())
                 .then(data => {
                     libros = data; //actualiza el array de libros
-                    cargarImagenes(data); //Recarla las miniaturas. 
+                    cargarImagenes(data); //Recarga las miniaturas. 
                     
                     if (libros.length > 0) { //muestra el primer libro si hay libros disponibles
                         mostrarLibro(0);
@@ -49,8 +49,7 @@ window.addEventListener("DOMContentLoaded", function() {
                 .catch(error => console.error('Error:', error));
         }
     }
-
-
+    
     //Función para limpiar la visualización del libro que se ha seleccionado. Vacía todo, imágenes y datos del libro. 
     function limpiarLibroSeleccionado() {
         fotoGrande.src = '';

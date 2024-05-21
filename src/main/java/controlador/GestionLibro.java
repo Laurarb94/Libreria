@@ -85,6 +85,17 @@ public class GestionLibro extends HttpServlet {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+		}else if(opcion == 4) {
+			//System.out.println("antes de expo "+request.getParameter("tipoLibro"));
+			
+			String tipoLibro = request.getParameter("tipoLibro"); //el tipoLibro viene del select name del formulario
+			//System.out.println("Entro en filtro con el tipo "+tipoLibro);
+			try {
+				out.print(DaoLibro.getInstance().listarJson(tipoLibro));
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		
 		

@@ -11,16 +11,16 @@
 .contenedor-superior{
 	display: flex;
 	justify-content: space-between;
-	marging-bottom: 50px;
+	marging-bottom: 30px;
 	margin-top: 50px;
+	gap: 70px;
 }
 
-.listas, .buscador{
+.buscador, .resenia {
 	width: 48%;
 }
 
-
-.buscar input {
+.buscar select {
 	margin-top: 20px;
 	flex: 1;
 	padding: 10px;
@@ -28,20 +28,40 @@
 	border-radius: 5%;
 }
 
-.buscar button{
-	padding: 10px 20px;
-}
-
 .resenia {
-	margin-top: 50px;
+	margin-top: 20px;
 	margin-bottom: 40px;
+	margin-left: 50px;
 	width: 100%;
 	align-items: center;
+	justify-content: justify;
+	
 }
 
 .resenia a{
-	margin-top: 20px;
+	margin-top: 40px;
 	text-align: center;
 }
 
+#listaLibros{
+	marging-top: 50px;
+	margin-right: 50px;
+	list-style-type: none;
+	
+}
 
+#listaLibros h3 {
+	margin-top: 40px;
+	margin-bottom: 10px;
+}
+
+#listaLibros p{
+	tetx-align: justify;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#listaLibros img{
+	width: 300px;
+	height:400px;
+}
