@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
 import com.google.gson.Gson;
 
@@ -63,14 +64,14 @@ public class DaoLibro {
 		return result;
 	}
 	
-	
 	//me hago un método para que me liste los datos anteriores (que estaban en formato arrayList) en formato Json
-	public String listarJson() throws SQLException {
-		String json = "";
-		Gson gson = new Gson();
-		json = gson.toJson(this.listarLibros());
-		return json;
-	}
+		public String listarJson() throws SQLException {
+			String json = "";
+			Gson gson = new Gson();
+			json = gson.toJson(this.listarLibros());
+			return json;
+		}
+		
 	
 	public Libro obtenerPorId(int idLibro) throws SQLException {
 		String sql = "SELECT * FROM libros WHERE idLibro =?";
@@ -115,6 +116,11 @@ public class DaoLibro {
 		ps.close();
 	
 	}
+	
+	
+	
+	
+	
 	
 	
 	

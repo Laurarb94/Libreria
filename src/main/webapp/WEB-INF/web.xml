@@ -79,4 +79,14 @@
     <servlet-name>GestionResenia</servlet-name>
     <url-pattern>/GestionResenia</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>BusquedaLibros</display-name>
+    <servlet-name>BusquedaLibros</servlet-name>
+    <servlet-class>controlador.BusquedaLibros</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BusquedaLibros</servlet-name>
+    <url-pattern>/BusquedaLibros</url-pattern>
+  </servlet-mapping>
 </web-app>

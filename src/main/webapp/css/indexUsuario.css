@@ -3,52 +3,45 @@
     margin: 0;
 }
 
-.buscar{
-    position: absolute;
-    padding: 5px;
-
+.contenido{
+	flex: 1;
+	paddinf: 20px;
 }
 
-.buscar input{
-    width: 240px;
-    height: 40px;
-    margin-top: 5%;
-    padding: 0 20px;
-    outline: none;
-    border: 1px solid silver;
-    border-radius: 50px;
+.contenedor-superior{
+	display: flex;
+	justify-content: space-between;
+	marging-bottom: 50px;
+	margin-top: 50px;
+}
+
+.listas, .buscador{
+	width: 48%;
+}
+
+
+.buscar input {
+	margin-top: 20px;
+	flex: 1;
+	padding: 10px;
+	margin-right: 10px;
+	border-radius: 5%;
 }
 
 .buscar button{
-    width: 80px;
-    height: 30px;
-    border-radius: 10%;   
-    background-color: aliceblue;
+	padding: 10px 20px;
 }
 
-.buscar button:hover{
-    background-color: rgb(223, 236, 169);
+.resenia {
+	margin-top: 50px;
+	margin-bottom: 40px;
+	width: 100%;
+	align-items: center;
 }
 
-.article h2{
-    margin-top: 15%;
+.resenia a{
+	margin-top: 20px;
+	text-align: center;
 }
 
-.article li{
-    list-style: none;
-}
 
-.article li:hover{
-    color: brown;
-}
-
-.sidebar{
-    margin-top: 10%;
-}
-
-.sidebar a{
-    margin-top: 20px;
-    text-decoration: none;
-    color: brown;
-    font-size: large;
-}
