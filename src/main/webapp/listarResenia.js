@@ -4,14 +4,14 @@ window.addEventListener("DOMContentLoaded", function() {
             .then(response => response.json())
             .then(data => pintarTabla(data));
     }
-
+/*
     function borrar(id){
         if(confirm("Seguro que quieres borrar")){
             fetch('GestionResenia?id='+id+'&op=2')
                 .then(response => response.json())
                 .then(data => pintarTabla(data));
         }
-    }
+    }*/
 
     function pintarTabla(datos){
         let contenedor = document.getElementById("listado");

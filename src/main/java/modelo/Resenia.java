@@ -1,5 +1,11 @@
 package modelo;
 
+import java.sql.SQLException;
+
+import com.google.gson.Gson;
+
+import dao.DaoResenia;
+
 public class Resenia {
 
 	private int id;
