@@ -3,41 +3,27 @@
     margin: 0;
 }
 
-.menu{
-    background-color: rgb(181, 243, 145);
-    justify-content: center;
-    height: 40px;
-}
-
-.menu ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
+.menu {
+    margin-top: 15px;
+	margin-bottom: 15px;
+	padding: 20px;
+	height: 70px;
+	background-color: #f2f2f2;
+	border-radius: 10px;
     text-align: center;
+    font-size: 30px;
+    
 }
 
-.menu ul li{
-    margin-right: 20px;
+.menu a{
+	text-decoration: none;
+    text-align: center;
+	color: #333;
+    
 }
 
-.menu ul li:last-child{
-    margin-right: 0;
-}
-
-.menu ul li a{
-    text-decoration: none;
-    color: black;
-    padding: 10px;
-    display: block;
-}
-
-.menu ul li a:hover{
-    background-color: brown;
-}
-
-.caja{
-  
+.menu a:hover{
+    background-color: #d5d2d2;
 }
 
 

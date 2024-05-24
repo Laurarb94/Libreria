@@ -5,7 +5,7 @@
 
 .formulario{
     width: 400px;
-    background-color: rgb(194, 244, 137);
+    background-color: #d3d3d3 ;
     padding: 30px;
     margin: auto;
     margin-top: 50px;
@@ -22,11 +22,11 @@
 
 .control{
     width: 100%;
-    background-color: rgb(234, 247, 158);
+    background-color:#f2e0e5 ;
     padding: 10px;
     border-radius: 4px;
     margin-bottom: 15px;
-    border: 1px solid rgb(237, 220, 26);
+    border: 1px solid rgb(226, 206, 220);
     font: 'calibri';
 }
 
@@ -42,7 +42,7 @@
 
 .formulario .boton{
     width: 100%;
-    background-color: lawngreen;
+    background-color: #b4a3b8 ;
     border: none;
     padding: 12px;
     color: black;

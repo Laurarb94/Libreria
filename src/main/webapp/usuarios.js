@@ -15,10 +15,15 @@ function llamada(){
 			
 		}
 	}
+
+
 	
 	function pintarTabla (datos){
 		
 		let html = "<table border='2' class='tabla'>";
+		
+		html +="<tr><th>ID</th><th>Nombre</th><th>Primer Apellido</th><th>Segundo Apellido</th><th>Teléfono</th><th>Código Postal</th><th>Mail</th><th>Permiso</th></tr>"
+		
 		
 		for(let i=0; i<datos.length;i++){
 			
@@ -28,7 +33,8 @@ function llamada(){
 				html +="<td>"+datos[i].apellido2+"</td>";
 				html += "<td>"+datos[i].telefono+"</td>";
 				html += "<td>"+datos[i].codPostal+"</td>";
-				html += "<td>"+datos[i].mail+"</td>";			
+				html += "<td>"+datos[i].mail+"</td>";
+				html += "<td>"+datos[i].permiso+"</td>";			
 				html += "<td><a href='formularioInscripcion.html?id="+datos[i].id+"&op=2'>&#9998;</a></td><td><a href='javascript:borrar("+datos[i].id+")'>&#128465;</a></td>";
 				html +="</tr>";
 			

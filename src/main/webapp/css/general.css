@@ -26,8 +26,7 @@ body{
 .contenedor > .footer {
     background-color: #fff;
     padding: 20px;
-    grid-column: 1/6; /*le estoy diciendo que el header y el footer ocupen desde la línea 1 a la 6, que ocupen todo*/
-    background-color: rgb(198, 235, 238);
+    background-color: #D6EAF8;
     color: black;
     height: 90px;
 }
@@ -35,7 +34,6 @@ body{
 .contenedor .header h1{
     text-align: center;
     margin-top: 10px;
-
 }
 
 .contenedor .header{
@@ -44,7 +42,5 @@ body{
     background-position: center;
     height: 90px;
     color: black;
-    background-color: rgba(0, 0, 0, 0.5);
 }
-
 

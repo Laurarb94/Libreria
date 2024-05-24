@@ -12,8 +12,8 @@ body {
 	display: flex; /*flex para que estén todos en horizontal, en una fila*/
 	justify-content: space-around; /*espacio entre los elementos*/
 	align-items: center;
-	paddin: 20px;
-	margin-botom: 30px;
+	padding: 20px;
+	margin-bottom: 30px;
 	margin-top: 10px;
 }
 
@@ -31,8 +31,6 @@ body {
     color: #000;
 }
 
-
-
 .menu:hover{
     background-color: rgb(223, 236, 169);
 }
@@ -41,10 +39,15 @@ main {
 	display: flex;
 	justify-content: space-betwee; /*distribuye los dos párrafos*/
 	align-items: flex-start; /*Alinéa los dos párrafos al inicio*/
-	paddin: 20px;
-	margin-botom: 50px;
+	padding: 30px;
+	margin-bottom: 50px;
 	margin-top: 10px;
-	gaap: 20px; /*Espacio entre los dos articles.*/
+	gap: 40px; /*Espacio entre los dos articles.*/
+}
+
+main h1{
+	text-align: center;
+	margin-bottom: 15px;
 }
 
 main article {
@@ -54,19 +57,29 @@ main article {
 	
 }
 
+.contenido article p{
+	margin-bottom: 20px;
+}
+
 .sidebar{
     padding: 30px; /*Separo los dos párrafos*/
-    margin-top: 30px;
+    margin-top: 50px;
     margin-bottom: 30px;
-    margin: 0;
     text-align: justify;
-    border: 2px solid black; 
-    box-sizing: border-box; /*con esto se asegura que el padding y los bordes se incluyan en el tamaño total del elemento para que el borde no aumente 
-    el tamaño total del elemento más allá de lo que se ha especificado.*/
+}
+
+.sidebar .inscripcion{
+	text-align: center;
 }
 
 .sidebar a{
 	text-decoration: none;
+	font-size: 1.5em;
+	color: #007BFF;
+}
+
+.sidebar a:hover{
+	color: #0056b3;
 }
 
 
