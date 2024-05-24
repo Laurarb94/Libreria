@@ -35,9 +35,6 @@ public class GestionUsuario extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	//	int idSesion = Integer.parseInt((String)sesion.getAttribute("id")); //esto lo recupero del servlet Login que es lo que estoy guardando
-	//	int idSesion = (int) sesion.getAttribute("id");
-	//	if(idSesion !=0) { //si idSesion es distinto a 0 es un usuario registrado
 		
 		sesion = request.getSession(false);
 
@@ -117,12 +114,6 @@ public class GestionUsuario extends HttpServlet {
 		
 		sesion = request.getSession(false); //previene la creación de una nueva sesión si no existe una
 		
-	//	if(sesion !=null) {
-		//	Object permisoObj = sesion.getAttribute("permiso");
-			
-		//	if(permisoObj instanceof Integer && (Integer) permisoObj == 9) {
-				
-				
 				String nombre = request.getParameter("nombre");
 				String apellido1 = request.getParameter("apellido1");
 				String apellido2 = request.getParameter("apellido2");
@@ -167,16 +158,6 @@ public class GestionUsuario extends HttpServlet {
 					e.printStackTrace();
 				}
 
-
-			//	response.sendRedirect("listarUsuario.html");
-
-
-				
-				
-		/*	}else {
-				System.out.println("No tienes permiso para acceder");
-				response.sendRedirect("formLogIn.html");
-			}*/
 			
 		}
 		
