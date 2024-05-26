@@ -41,6 +41,13 @@
 .resenia a{
 	margin-top: 40px;
 	text-align: center;
+	font-size: 2.5em;
+	color:#b58585;
+	text-decoration: none;
+}
+
+.resenia a:hover {
+	color: #9f0f0f;
 }
 
 #listaLibros{
