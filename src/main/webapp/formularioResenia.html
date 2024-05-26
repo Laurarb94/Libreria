@@ -10,7 +10,7 @@
    <script type="text/javascript">
  
  function llamada(id){
-		fetch('GestionReseña?idResenia='+id)
+		fetch('GestionResenia?idResenia='+id)
 		.then(response => response.json())
 		.then(data => pintarFormulario(data))
 }
@@ -50,13 +50,12 @@
         <header class="header">
             <h1>LIBRERÍA MI LIMÓN</h1>
             <div class="img__back"></div>
-        <!---- <img src="/prinicpal/fotos/logoLibLimon.png" alt="">  NO ME SALE. NO CONSIGO QUE ESTÉ DENTRO DEL HEADER-->
         </header>
     
     
     <div class="formulario">
         <h4>Formulario de Reseñas</h4>
-    <form name = "reseña" action="GestionResenia" method="Post" id="altas">
+    <form name = "resenia" action="GestionResenia" method="Post" id="altas">
     <input type="hidden" id="id" name="id">
     
     <input class="control" type="text" name="titulo" id="titulo" placeholder="Introduce el título del libro" required>

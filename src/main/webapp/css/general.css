@@ -44,3 +44,15 @@ body{
     color: black;
 }
 
+.contenedor .footer h4{
+    text-align: center;
+    margin-top: 5px;
+}
+
+.contenedor .footer p{
+    margin-top: 5px;
+}
+
+.contenedor .footer a{
+    color: black;
+}

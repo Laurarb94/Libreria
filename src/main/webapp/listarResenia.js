@@ -34,6 +34,7 @@ window.addEventListener("DOMContentLoaded", function() {
             nombreUsuario.classList.add("nombre-usuario");
             nombreUsuario.textContent = "Nombre del usuario: " + datos[i].nombreEscribeResenia;
 
+          /*   
             let borrar = document.createElement("div");
             let enlaceBorrar = document.createElement("a");
             enlaceBorrar.textContent = "Borrar";
@@ -41,14 +42,14 @@ window.addEventListener("DOMContentLoaded", function() {
             enlaceBorrar.addEventListener("click", function(){
                 borrar(datos[i].id);
             });
-            borrar.appendChild(enlaceBorrar);
+            borrar.appendChild(enlaceBorrar);*/
 
             cuadrado.appendChild(nombreLibro);
             cuadrado.appendChild(fecha);
             cuadrado.appendChild(calificacion);
             cuadrado.appendChild(contenido);
             cuadrado.appendChild(nombreUsuario);
-            cuadrado.appendChild(borrar);
+           // cuadrado.appendChild(borrar);
 
             contenedor.appendChild(cuadrado);
         }

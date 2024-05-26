@@ -1,71 +1,71 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Añadir Libro</title>
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/formulario.css">
-    <link rel="stylesheet" href="css/admin.css">
-    <script src="añadirLibro.js"></script>
-    
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Añadir Libro</title>
+<link rel="stylesheet" href="css/general.css">
+<link rel="stylesheet" href="css/formulario.css">
+<link rel="stylesheet" href="css/admin.css">
+<script src="añadirLibro.js"></script>
+
 </head>
 <body>
-    <div class="contenedor">
-        <header class="header">
-            <h1>LIBRERÍA MI LIMÓN</h1>
-            <div class="img__back"></div>
-        </header>
+	<div class="contenedor">
+		<header class="header">
+			<h1>LIBRERÍA MI LIMÓN</h1>
+			<div class="img__back"></div>
+		</header>
 
-        <nav class="menu">
-            <ul>
-                <li><a href="/admin/doctHtml/index.html">Página personal administrador</a></li>
-            </ul>
-        </nav>
+		<nav class="menu">
+			<ul>
+				<li><a href="/admin/doctHtml/index.html">Página personal
+						administrador</a></li>
+			</ul>
+		</nav>
 
-        <div class="formulario">
-        
-        <form name ="AñadirLibro" action="GestionLibro" method="post"  enctype="multipart/form-data">  
-        <h4>Añadir Libro</h4>
-          
-            <label>ISBN</label>
-            <input class="control" type="text" name="isbn" id="isbn" /> 
-          
-            <label>Título</label>
-            <input class="control" type="text" id="titulo" name="tituloLibro" /> 
+		<div class="formulario">
 
-            <label>Nombre del Autor/autora</label>
-            <input class="control" type="text" id="autor" name="nombreAutorLibro" />
-            
-            <label>Primer apellido</label>
-            <input class="control" type="text" id="autor" name="apellido1AutorLibro" /> 
-            
-            <label>Segundo apellido</label>
-            <input class="control" type="text" id="autor" name="apellido2AutorLibro" />  
+			<form name="AñadirLibro" action="GestionLibro" method="post"
+				enctype="multipart/form-data">
+				<h4>Añadir Libro</h4>
 
-            <label for="genero">Género del libro</label>
-            <input class="control" type="text" id="genero" name="generoLibro" /> 
-            
-            <label for="psinopsis">Psinopsis del libro</label>
-            <textarea class="control" id="psinopsis" name="psinopsis" cols="50" rows="10"></textarea>
- 
-            <label>Foto:</label><input class="control" type="file" name="fotoPortada" id="fotoPortada" /> 
-            
-            
-            <input class="boton" type="submit" value="Añadir Libro">
-            
-            </form>  
-    </div>
-    
+				<label>ISBN</label> <input class="control" type="text" name="isbn"
+					id="isbn" /> <label>Título</label> <input class="control"
+					type="text" id="titulo" name="tituloLibro" /> <label>Nombre
+					del Autor/autora</label> <input class="control" type="text" id="autor"
+					name="nombreAutorLibro" /> <label>Primer apellido</label> <input
+					class="control" type="text" id="autor" name="apellido1AutorLibro" />
+
+				<label>Segundo apellido</label> <input class="control" type="text"
+					id="autor" name="apellido2AutorLibro" /> <label for="genero">Género
+					del libro</label> <input class="control" type="text" id="genero"
+					name="generoLibro" /> <label for="psinopsis">Psinopsis del
+					libro</label>
+				<textarea class="control" id="psinopsis" name="psinopsis" cols="50"
+					rows="10"></textarea>
+
+				<label>Foto:</label><input class="control" type="file"
+					name="fotoPortada" id="fotoPortada" /> <input class="boton"
+					type="submit" value="Añadir Libro">
+
+			</form>
+		</div>
 
 
 
-        <footer class="footer">
-        <h4>FOOTER</h4>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat labore quod quibusdam enim, saepe, dolor 
-            maiores debitis maxime porro, deleniti nostrum! Sit distinctio eos magnam? Laborum qui 
-            assumenda aut quas.</p>
-    </footer>
-    </div> 
+
+		<footer class="footer">
+			<h4>Biblioteca Mi Limón</h4>
+			<p>
+				Si necesitas cualquier cosa, contáctanos aquí : <a
+					href="mailto:bibliotecamilimon@milimon.es">bibliotecamilimon@milimon.es</a>
+			</p>
+			<p>Si prefieres, también estaremos encantadas de atenderte en:
+				600100200</p>
+			<p>Nuestro horario de atención: De Lunes a viernes de 10:00 a
+				18:00</p>
+		</footer>
+	</div>
 </body>
 </html>
