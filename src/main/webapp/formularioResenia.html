@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reseñas e interacción autores y usuarios</title>
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/formulario.css">
-  
-   <script type="text/javascript">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reseñas e interacción autores y usuarios</title>
+<link rel="stylesheet" href="css/general.css">
+<link rel="stylesheet" href="css/formulario.css">
+
+<script type="text/javascript">
  
  function llamada(id){
 		fetch('GestionResenia?idResenia='+id)
@@ -40,40 +40,51 @@
 		}
  
     </script>
-  
-  
-  
-  
+
+
+
+
 </head>
 <body>
-    <div class="contenedor">
-        <header class="header">
-            <h1>LIBRERÍA MI LIMÓN</h1>
-            <div class="img__back"></div>
-        </header>
-    
-    
-    <div class="formulario">
-        <h4>Formulario de Reseñas</h4>
-    <form name = "resenia" action="GestionResenia" method="Post" id="altas">
-    <input type="hidden" id="id" name="id">
-    
-    <input class="control" type="text" name="titulo" id="titulo" placeholder="Introduce el título del libro" required>
-    <input class="control" type="date" name="fecha" id="fecha" placeholder="Introduce la fecha de hoy" required>
-    <textarea class="control" id="contenido" name="contenido" cols="30" rows="10"></textarea><br>
-    <label for="calificación">Califica de 1 a 5 el libro, siendo 1 la nota más baja y 5 la más alta</label>
-    <input class="control" type="number" name="calificacion" id="calificacion" min="1" max="5" required>
-    <input class="control" type="text" name="nombreEscribeResenia" id="nombreEscribeResenia" placeholder="Escribe tu nombre" required>
-    <input type="submit" value="enviar reseña">
-    </form> 
-    </div>
+	<div class="contenedor">
+		<header class="header">
+			<h1>LIBRERÍA MI LIMÓN</h1>
+			<div class="img__back"></div>
+		</header>
 
-    <footer class="footer">
-        <h4>FOOTER</h4>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat labore quod quibusdam enim, saepe, dolor 
-            maiores debitis maxime porro, deleniti nostrum! Sit distinctio eos magnam? Laborum qui 
-            assumenda aut quas.</p>
-    </footer>
-    </div>
+
+		<div class="formulario">
+			<h4>Formulario de Reseñas</h4>
+			<form name="resenia" action="GestionResenia" method="Post" id="altas">
+				<input type="hidden" id="id" name="id"> <input
+					class="control" type="text" name="titulo" id="titulo"
+					placeholder="Introduce el título del libro" required> <input
+					class="control" type="date" name="fecha" id="fecha"
+					placeholder="Introduce la fecha de hoy" required>
+				<textarea class="control" id="contenido" name="contenido" cols="30"
+					rows="10"></textarea>
+				<br> <label for="calificación">Califica de 1 a 5 el
+					libro, siendo 1 la nota más baja y 5 la más alta</label> <input
+					class="control" type="number" name="calificacion" id="calificacion"
+					min="1" max="5" required> <input class="control"
+					type="text" name="nombreEscribeResenia" id="nombreEscribeResenia"
+					placeholder="Escribe tu nombre" required> <input
+					class="boton" type="submit" value="enviar reseña">
+			</form>
+		</div>
+
+		<footer class="footer">
+			<h4>Biblioteca Mi Limón</h4>
+			<p>
+				Si necesitas cualquier cosa, contáctanos aquí : <a
+					href="mailto:bibliotecamilimon@milimon.es">bibliotecamilimon@milimon.es</a>
+			</p>
+			<p>Si prefieres, también estaremos encantadas de atenderte en:
+				600100200</p>
+			<p>Nuestro horario de atención: De Lunes a viernes de 10:00 a
+				18:00</p>
+		</footer>
+
+	</div>
 </body>
 </html>
