@@ -50,6 +50,7 @@ public class Usuario {
 	 * Representa la contraseña del usuario
 	 */
 	private String password;
+	
 	/**
 	 * Constructor para generar un objeto vacío de tipo usuario
 	 */

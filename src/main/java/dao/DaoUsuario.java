@@ -19,8 +19,7 @@ public class DaoUsuario {
 	private static DaoUsuario instance = null;
 
 	/**
-	 * Constructor privado. Evita que se pueda instanciar directamente la clase. 
-	 * Utiliza DBConexion para poder conectarse a la bbdd
+	 * Constructor de la clase DaoUsuario. Utiliza DBConexion para poder conectarse a la bbdd
 	 * @throws SQLException si ocurre un error al obtener la conexión a la bbdd
 	 */
 	public DaoUsuario () throws SQLException {
@@ -65,7 +64,7 @@ public class DaoUsuario {
 	}
 	
 	/**
-	 * Método para obtener una lista con toda la información de los usuarios almacenada en la bbdd.
+	 * Método para listar toda la información del usuarios almacenada en la bbdd.
 	 * @return lista de objetos usuario con la información de todos los usuarios almacenados en la bbdd.
 	 * @throws SQLException si ocurre un error al obtener la conexión a la bbdd
 	 */
