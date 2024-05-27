@@ -124,6 +124,7 @@ public class GestionUsuario extends HttpServlet {
 				String password = request.getParameter("password");
 				String id = request.getParameter("id");
 				
+				//Uso este mapeo porque en un momento me dio error y no sabía de dónde venía
 				Map<String, String[]> parameters = request.getParameterMap();
 			    for(String parameter : parameters.keySet()) {
 			        System.out.println("Parameter name: " + parameter);
