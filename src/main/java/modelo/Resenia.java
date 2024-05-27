@@ -9,8 +9,8 @@ import dao.DaoResenia;
 
 /**
  * Clase que representa una reseña del sistema. 
- * Esta clase almacena información acerca de su id, título del libro que se reseña, fecha, calificación, contenido y usuario que la escribe.
- * Se va a utlizar para crear, modificar, borrar y/o recuperar información sobre usuarios del sistema. 
+ * Esta clase almacena informacion acerca de su id, titulo del libro que se reseña, fecha, calificacion, contenido y usuario que la escribe.
+ * Se va a utlizar para crear, modificar, borrar y/o recuperar informacion sobre usuarios del sistema. 
  */
 public class Resenia {
 
@@ -20,7 +20,7 @@ public class Resenia {
 	private int idResenia;
 	
 	/**
-	 * Representa el título del libro que se va a hacer la reseña
+	 * Representa el titulo del libro que se va a hacer la reseña
 	 */
 	private String titulo;
 	
@@ -30,7 +30,7 @@ public class Resenia {
 	private String fecha;
 	
 	/**
-	 * Representa la calificación de la reseña
+	 * Representa la calificacion de la reseña
 	 */
 	private int calificacion;
 	
@@ -45,18 +45,18 @@ public class Resenia {
 	private String nombreEscribeResenia;
 	
 	/**
-	 * Constructor para generar un objeto vacío de tipo reseña
+	 * Constructor para generar un objeto vacio de tipo reseña
 	 */
 	public Resenia() {
 		
 	}
 
 	/**
-	 * Constructor para <strong>creación del objeto. Este constructor se usa cuando los datos van a la bbdd</strong>
-	 * @param id identificador único de la reseña
-	 * @param titulo el título del libro que se reseña
+	 * Constructor para <strong>creacion del objeto. Este constructor se usa cuando los datos van a la bbdd</strong>
+	 * @param id identificador unico de la reseña
+	 * @param titulo el titulo del libro que se reseña
 	 * @param fecha la fecha en que se realiza la reseña
-	 * @param calificacion la calificación de la reseña
+	 * @param calificacion la calificacion de la reseña
 	 * @param contenido el contenido de la reseña
 	 * @param nombreEscribeResenia el nombre del usuario que escribe la reseña
 	 */
@@ -74,9 +74,9 @@ public class Resenia {
 
 	/**
 	 * Constructor para <strong>creación del objeto. Este constructor se usa cuando los datos vienen de un formulario</strong>
-	 *  @param titulo el título del libro que se reseña
+	 *  @param titulo el titulo del libro que se reseña
 	 * @param fecha la fecha en que se realiza la reseña
-	 * @param calificacion la calificación de la reseña
+	 * @param calificacion la calificacion de la reseña
 	 * @param contenido el contenido de la reseña
 	 * @param nombreEscribeResenia el nombre del usuario que escribe la reseña
 	 */
@@ -90,7 +90,7 @@ public class Resenia {
 	}
 
 	/**
-	 * Método de inclusión del id en el objeto resenia
+	 * Metodo de inclusion del id en el objeto resenia
 	 * @return retorna el id en tipo entero
 	 */
 	public int getIdResenia() {
@@ -98,7 +98,7 @@ public class Resenia {
 	}
 
 	/**
-	 * Método para establcer el identificador único del ysyario
+	 * Metodo para establcer el identificador unico del usuario
 	 * @param idResenia forma en que se establece el identificador de la resenia
 	 */
 	public void setIdResenia(int idResenia) {
@@ -106,23 +106,23 @@ public class Resenia {
 	}
 
 	/**
-	 * Método para obtener el título del libro
-	 * @return el título del libro
+	 * Metodo para obtener el titulo del libro
+	 * @return el titulo del libro
 	 */
 	public String getTitulo() {
 		return titulo;
 	}
 
 	/**
-	 * Método para establecer el título del libro que se resenia
-	 * @param titulo el nuevo título del libro que se resenia
+	 * Metodo para establecer el titulo del libro que se resenia
+	 * @param titulo el nuevo titulo del libro que se resenia
 	 */
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}
 
 	/**
-	 * Método para obtener la fecha de la resenia
+	 * Metodo para obtener la fecha de la resenia
 	 * @return la fecha de la resenia
 	 */
 	public String getFecha() {
@@ -130,7 +130,7 @@ public class Resenia {
 	}
  
 	/**
-	 * Método para establecer la fecha de la resenia
+	 * Metodo para establecer la fecha de la resenia
 	 * @param fecha la nueva fecha de la resenia
 	 */
 	public void setFecha(String fecha) {
@@ -138,8 +138,8 @@ public class Resenia {
 	}
 
 	/**
-	 * Método para obtener la calificación de la resenia
-	 * @return la calificación de la resenia
+	 * Metodo para obtener la calificacion de la resenia
+	 * @return la calificacion de la resenia
 	 */
 
 	public int getCalificacion() {
@@ -147,15 +147,15 @@ public class Resenia {
 	}
 	
 	/**
-	 * Método para establecer la calificación de la resenia
-	 * @param calificacion la nueva calificación de la resenia
+	 * Metodo para establecer la calificacion de la resenia
+	 * @param calificacion la nueva calificacion de la resenia
 	 */
 	public void setCalificacion(int calificacion) {
 		this.calificacion = calificacion;
 	}
 
 	/**
-	 * Método para obtener el contenid de la resenia
+	 * Metodo para obtener el contenido de la resenia
 	 * @return el contenido de la resenia
 	 */
 	public String getContenido() {
@@ -163,7 +163,7 @@ public class Resenia {
 	}
 
 	/**
-	 * Método para establecer el contenido de la resenia
+	 * Metodo para establecer el contenido de la resenia
 	 * @param contenido el nuevo contenido de la resenia
 	 */
 	public void setContenido(String contenido) {
@@ -171,7 +171,7 @@ public class Resenia {
 	}
 
 	/**
-	 * Método para obtener el nombre del usuario que escribe la resenia
+	 * Metodo para obtener el nombre del usuario que escribe la resenia
 	 * @return el nombre del usuario que escribe la resenia
 	 */
 	public String getNombreEscribeResenia() {
@@ -179,7 +179,7 @@ public class Resenia {
 	}
 
 	/**
-	 * Método para establecer el nombre del usuario que escribe la resenia
+	 * Metodo para establecer el nombre del usuario que escribe la resenia
 	 * @param nombreEscribeResenia el nuevo nombre del usuario que escribe la resenia
 	 */
 	public void setNombreEscribeResenia(String nombreEscribeResenia) {
@@ -187,7 +187,7 @@ public class Resenia {
 	}
 
 	/**
-	 * Método toString. Devuelve una representación de cadena del objeto resenia. Esta representación 
+	 * Metodo toString. Devuelve una representacion de cadena del objeto resenia. Esta representacion 
 	 * incluye los valores de todos los atributos del obteto. 
 	 */
 	@Override
@@ -197,7 +197,7 @@ public class Resenia {
 	}
 	
 	/**
-	 * Método que inserta el objeto resenia en la base de datos. Utiliza el patrón Singleton para obtener la instancia Dao. 
+	 * Metodo que inserta el objeto resenia en la base de datos. Utiliza el patron Singleton para obtener la instancia Dao. 
 	 * @throws SQLException si ocurre un error al insertar el usuario en la base de datos. 
 	 */
 	public void insertar() throws SQLException {
@@ -205,8 +205,8 @@ public class Resenia {
 	}
 	
 	/**
-	 * Método para borrar el objeto resenia en la base de datos. Utiliza el patrón Singleton para obtener la instancia Dao. 
-	 * @param id identificador único de la resenia
+	 * Metodo para borrar el objeto resenia en la base de datos. Utiliza el patron Singleton para obtener la instancia Dao. 
+	 * @param id identificador unico de la resenia
 	 * @throws SQLException si ocurre un error al insertar el usuario en la base de datos.
 	 */
 	public void borrar() throws SQLException {

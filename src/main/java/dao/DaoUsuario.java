@@ -27,10 +27,10 @@ public class DaoUsuario {
 	}
 
 	/**
-	 * Obtiene la instancia única de la clase DaoUsuario utilizando el Patrón Singleton.Este patrón permite que, al llamar a un método estático 
-	 *  en la clase DaoUsuario me devuelva la propia clase, y al devolverme la propia clase ya se dispone de todos sus métodos. 
+	 * Obtiene la instancia unica de la clase DaoUsuario utilizando el Patron Singleton.Este patron permite que, al llamar a un metodo estatico 
+	 *  en la clase DaoUsuario me devuelva la propia clase, y al devolverme la propia clase ya se dispone de todos sus metodos. 
 	 * @return instancia única de la clase DaoUsuario
-	 * @throws SQLException si ocurre un error al obtener la conexión a la bbdd
+	 * @throws SQLException si ocurre un error al obtener la conexion a la bbdd
 	 */
 	public static DaoUsuario getInstance () throws SQLException {
 		if(instance == null) {
@@ -40,9 +40,9 @@ public class DaoUsuario {
 	}
 	
 	/**
-	 * Método para insertar un nuevo usuario en la bbdd. 
+	 * Metodo para insertar un nuevo usuario en la bbdd. 
 	 * @param usuario el usuario a insertar en la bbdd
-	 * @throws SQLException si ocurre un error al obtener la conexión a la bbdd
+	 * @throws SQLException si ocurre un error al obtener la conexion a la bbdd
 	 */
 	public void insertarUsuario (Usuario usuario) throws SQLException {
 
@@ -64,9 +64,9 @@ public class DaoUsuario {
 	}
 	
 	/**
-	 * Método para listar toda la información del usuarios almacenada en la bbdd.
-	 * @return lista de objetos usuario con la información de todos los usuarios almacenados en la bbdd.
-	 * @throws SQLException si ocurre un error al obtener la conexión a la bbdd
+	 * Metodo para listar toda la informacion del usuarios almacenada en la bbdd.
+	 * @return lista de objetos usuario con la informacion de todos los usuarios almacenados en la bbdd.
+	 * @throws SQLException si ocurre un error al obtener la conexion a la bbdd
 	 */
 	public ArrayList<Usuario> listarUsuarios() throws SQLException{
 		String sql = "SELECT * FROM usuario";
@@ -88,9 +88,9 @@ public class DaoUsuario {
 	}
 	
 	/**
-	 * Método para que me liste los datos recogidos anteriormente en formato arrayList,en formato JSON. 
-	 * @return lista de objetos usuario en formato JSON con la información de todos los usuarios almacenados en la bbdd.
-	 * @throws SQLException si ocurre un error al obtener la conexión a la bbdd
+	 * Metodo para que me liste los datos recogidos anteriormente en formato arrayList,en formato JSON. 
+	 * @return lista de objetos usuario en formato JSON con la informacion de todos los usuarios almacenados en la bbdd.
+	 * @throws SQLException si ocurre un error al obtener la conexion a la bbdd
 	 */
 	public String listarJson() throws SQLException {
 		String json = "";
@@ -100,9 +100,9 @@ public class DaoUsuario {
 	}
 	
 	/**
-	 * Método para borrar un usuario almacenado en la bbdd.
-	 * @param id identificador único del usuario
-	 * @throws SQLException si ocurre un error al obtener la conexión a la bbdd
+	 * Metodo para borrar un usuario almacenado en la bbdd.
+	 * @param id identificador unico del usuario
+	 * @throws SQLException si ocurre un error al obtener la conexion a la bbdd
 	 */
 	public void borrarUsario (int id) throws SQLException {
 		PreparedStatement ps = con.prepareStatement("DELETE FROM usuario WHERE id = ?");
@@ -114,10 +114,10 @@ public class DaoUsuario {
 	}
 	
 	/**
-	 * Método para obtener los datos del usuario a través de su id.
-	 * @param id identificador único del usuario
+	 * Metodo para obtener los datos del usuario a traves de su id.
+	 * @param id identificador unico del usuario
 	 * @return objeto usuario con los datos del usuario corresopndientes al id proporcionado. 
-	 * @throws SQLException si ocurre un error al obtener la conexión a la bbdd
+	 * @throws SQLException si ocurre un error al obtener la conexion a la bbdd
 	 */
 	public Usuario obtenerPorID(int id) throws SQLException {
 		String sql = "SELECT * FROM usuario WHERE id =?";
@@ -132,9 +132,9 @@ public class DaoUsuario {
 	}
 	
 	/**
-	 * Método para actualizar un usuario. 
+	 * Metodo para actualizar un usuario. 
 	 * @param u datos del usuario que se quiere actualizar 
-	 * @throws SQLException si ocurre un error al obtener la conexión a la bbdd
+	 * @throws SQLException si ocurre un error al obtener la conexion a la bbdd
 	 */
 	public void actualizar (Usuario u) throws SQLException {
 		String sql = "UPDATE usuario SET nombre=?, apellido1=?, apellido2=?, telefono=?, codPostal=?, mail=?, permiso=? "
@@ -154,11 +154,11 @@ public class DaoUsuario {
 	}
 	
 	/**
-	 * Método para verificar las credenciales del mail y contraseña del usuario en el inicio de sesión. 
-	 * @param u usuario que quiere iniciar sesión. 
-	 * @param password contraseña del usuario para poder iniciar sesión. 
-	 * @return objeto usuario si las credenciales son válidas en el inico de sesión. 
-	 * @throws SQLException si ocurre un error al obtener la conexión a la bbdd
+	 * Metodo para verificar las credenciales del mail y contraseña del usuario en el inicio de sesion. 
+	 * @param u usuario que quiere iniciar sesion. 
+	 * @param password contraseña del usuario para poder iniciar sesion. 
+	 * @return objeto usuario si las credenciales son validas en el inico de sesion. 
+	 * @throws SQLException si ocurre un error al obtener la conexion a la bbdd
 	 */
 	public Usuario logueando(Usuario u, String password) throws SQLException {
 		String sql = "SELECT * FROM usuario WHERE mail=? AND password=?";

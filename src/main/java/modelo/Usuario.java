@@ -8,8 +8,8 @@ import dao.DaoUsuario;
 
 /**
  * Clase que representa un usuario del sistema. 
- * Esta clase almacena información acerca de su id, nombre, apellidos, teléfono, mail, código postal, permiso y contraseña. 
- * Se va a utlizar para crear, modificar, borrar y/o recuperar información sobre usuarios del sistema. 
+ * Esta clase almacena informacion acerca de su id, nombre, apellidos, telefono, mail, codigo postal, permiso y contraseña. 
+ * Se va a utlizar para crear, modificar, borrar y/o recuperar informacion sobre usuarios del sistema. 
  */
 public class Usuario {
 
@@ -31,11 +31,11 @@ public class Usuario {
 	 */
 	private String apellido2;
 	/**
-	 * Representa el teléfono del usuario
+	 * Representa el telefono del usuario
 	 */
 	private int telefono; 
 	/**
-	 *Representa el código postal del usuario 
+	 *Representa el codigo postal del usuario 
 	 */
 	private int codPostal;
 	/**
@@ -59,13 +59,13 @@ public class Usuario {
 	}
 	
 	/**
-	 * Constructor para <strong>creación del objeto. Este constructor se usa cuando los datos van a la bbdd</strong>
-	 * @param id identificador único del usuario
+	 * Constructor para <strong>creacion del objeto. Este constructor se usa cuando los datos van a la bbdd</strong>
+	 * @param id identificador unico del usuario
 	 * @param nombre el nombre del usuario
 	 * @param apellido1 el primer apellido del usuario
 	 * @param apellido2 el segundo apellido del usuario
-	 * @param telefono el teléfono del usuario
-	 * @param codPostal el código postal del usuario
+	 * @param telefono el telefono del usuario
+	 * @param codPostal el codigo postal del usuario
 	 * @param mail el mail del usuario
 	 * @param permiso el permiso del usuario
 	 * @param password la contraseña del usuario
@@ -86,12 +86,12 @@ public class Usuario {
 	}
 	
 	/**
-	 * Constructor para <strong>creación del objeto. Este constructor se usa cuando los datos vienen de un formulario</strong>
+	 * Constructor para <strong>creacion del objeto. Este constructor se usa cuando los datos vienen de un formulario</strong>
 	 * @param nombre el nombre del usuario
 	 * @param apellido1 el primer apellido del usuario
 	 * @param apellido2 el segundo apellido del usuario
-	 * @param telefono el teléfono del usuario
-	 * @param codPostal el código postal del usuario
+	 * @param telefono el telefono del usuario
+	 * @param codPostal el codigo postal del usuario
 	 * @param mail el mail del usuario
 	 * @param permiso el permiso del usuario
 	 * @param password la contraseña del usuario
@@ -111,12 +111,12 @@ public class Usuario {
 	}
 	
 	/**
-	 * Constructor para <strong>creación del objeto. Constructor sin contraseña.</strong>
+	 * Constructor para <strong>creacion del objeto. Constructor sin contraseña.</strong>
 	 * @param nombre el nombre del usuario
 	 * @param apellido1 el primer apellido del usuario
 	 * @param apellido2 el segundo apellido del usuario
-	 * @param telefono el teléfono del usuario
-	 * @param codPostal el código postal del usuario
+	 * @param telefono el telefono del usuario
+	 * @param codPostal el codigo postal del usuario
 	 * @param mail el mail del usuario
 	 * @param permiso el permiso del usuario
 	 */
@@ -135,7 +135,7 @@ public class Usuario {
 	
 
 	/**
-	 * Método de inclusión del id en el objeto
+	 * Metodo de inclusion del id en el objeto
 	 * @return retorna el id en tipo entero
 	 */
 	public int getId() {
@@ -143,7 +143,7 @@ public class Usuario {
 	}
 
 	/**
-	 * Método para establecer el identificador único del usuario
+	 * Metodo para establecer el identificador unico del usuario
 	 * @param id forma en que se establece el nuevo identificador del usuario
 	 */
 	public void setId(int id) {
@@ -151,7 +151,7 @@ public class Usuario {
 	}
 	
 	/**
-	 * Método para obtener el nombre del usuario
+	 * Metodo para obtener el nombre del usuario
 	 * @return el nombre del usuario
 	 */
 	public String getNombre() {
@@ -159,7 +159,7 @@ public class Usuario {
 	}
 
 	/**
-	 * Método para establecer el nombre del usuario
+	 * Metodo para establecer el nombre del usuario
 	 * @param nombre el nuevo nombre del usuario
 	 */
 	public void setNombre(String nombre) {
@@ -167,7 +167,7 @@ public class Usuario {
 	}
 
 	/**
-	 * Método para obtener el primer apellido del usuario
+	 * Metodo para obtener el primer apellido del usuario
 	 * @return el primer apellido del usuario
 	 */
 	public String getApellido1() {
@@ -175,7 +175,7 @@ public class Usuario {
 	}
 
 	/**
-	 * Método para establecer el primer apellido del usuario
+	 * Metodo para establecer el primer apellido del usuario
 	 * @param apellido1 el nuevo primer apellido del usuario
 	 */
 	public void setApellido1(String apellido1) {
@@ -183,7 +183,7 @@ public class Usuario {
 	}
 
 	/**
-	 * Método para obtener el segundo apellido del usuario
+	 * Metodo para obtener el segundo apellido del usuario
 	 * @return el segundo apellido del usuario
 	 */
 	public String getApellido2() {
@@ -191,7 +191,7 @@ public class Usuario {
 	}
 
 	/**
-	 * Método para establecer el segundo apellido del usuario
+	 * Metodo para establecer el segundo apellido del usuario
 	 * @param apellido2 el nuevo segundo apellido del usuario
 	 */
 	public void setApellido2(String apellido2) {
@@ -199,39 +199,39 @@ public class Usuario {
 	}
 	
 	/**
-	 * Método para obtener el teléfono del usuario
-	 * @return el teléfono del usuario
+	 * Metodo para obtener el telefono del usuario
+	 * @return el telefono del usuario
 	 */
 	public int getTelefono() {
 		return telefono;
 	}
 
 	/**
-	 * Método para establecer el teléfono del usuario
-	 * @param telefono el nuevo teléfono del usuario
+	 * Metodo para establecer el teléfono del usuario
+	 * @param telefono el nuevo telefono del usuario
 	 */
 	public void setTelefono(int telefono) {
 		this.telefono = telefono;
 	}
 
 	/**
-	 * Método para obtener el código postal del usuario
-	 * @return el código postal del usuario
+	 * Metodo para obtener el codigo postal del usuario
+	 * @return el codigo postal del usuario
 	 */
 	public int getCodPostal() {
 		return codPostal;
 	}
 
 	/**
-	 * Método para establecer el código postal del usuario
-	 * @param codPostal el nuevo código postal del usuario
+	 * Metodo para establecer el codigo postal del usuario
+	 * @param codPostal el nuevo codigo postal del usuario
 	 */
 	public void setCodPostal(int codPostal) {
 		this.codPostal = codPostal;
 	}
 
 	/**
-	 * Método para obtener el mail del usuario
+	 * Metodo para obtener el mail del usuario
 	 * @return el mail del usuario
 	 */
 	public String getMail() {
@@ -239,7 +239,7 @@ public class Usuario {
 	}
 
 	/**
-	 * Método para establecer el mail del usuario
+	 * Metodo para establecer el mail del usuario
 	 * @param mail el nuevo mail del usuario
 	 */
 	public void setMail(String mail) {
@@ -247,7 +247,7 @@ public class Usuario {
 	}
 
 	/**
-	 * Método para obtener el permiso del usuario
+	 * Metodo para obtener el permiso del usuario
 	 * @return el permiso del usuario
 	 */
 	public int getPermiso() {
@@ -255,7 +255,7 @@ public class Usuario {
 	}
 
 	/**
-	 * Método para establecer el permiso del usuario
+	 * Metodo para establecer el permiso del usuario
 	 * @param permiso el nuevo permiso del usuario
 	 */
 	public void setPermiso(int permiso) {
@@ -263,7 +263,7 @@ public class Usuario {
 	}
 	
 	/**
-	 * Método para obtener la contraseña del usuario
+	 * Metodo para obtener la contraseña del usuario
 	 * @return la contraseña del usuario
 	 */
 	public String getPassword() {
@@ -271,7 +271,7 @@ public class Usuario {
 	}
 
 	/**
-	 * Método para establecer el permiso del usuario
+	 * Metodo para establecer el permiso del usuario
 	 * @param password la nueva contraseña del usuario
 	 */
 	public void setPassword(String password) {
@@ -279,7 +279,7 @@ public class Usuario {
 	}
 
 	/**
-	 * Método toString. Devuelve una representación de cadena del objeto usuario. Esta representación 
+	 * Metodo toString. Devuelve una representacion de cadena del objeto usuario. Esta representacion 
 	 * incluye los valores de todos los atributos del obteto. 
 	 */
 	@Override
@@ -290,7 +290,7 @@ public class Usuario {
 	}
 	
 	/**
-	 * Método que inserta el objeto usuario en la base de datos. Utiliza el patrón Singleton para obtener la instancia Dao. 
+	 * Metodo que inserta el objeto usuario en la base de datos. Utiliza el patrón Singleton para obtener la instancia Dao. 
 	 * @throws SQLException si ocurre un error al insertar el usuario en la base de datos. 
 	 */
 	public void insertarUsuario() throws SQLException {
@@ -298,7 +298,7 @@ public class Usuario {
 	}
 	
 	/**
-	 * Método para obtener al usuario por el id
+	 * Metodo para obtener al usuario por el id
 	 * @param id el id del usuario
 	 * @throws SQLException si ocurre un error al insertar el usuario en la base de datos. 
 	 */
@@ -317,7 +317,7 @@ public class Usuario {
 	}
 	
 	/**
-	 * Método para actualizar el objeto usuario en la base de datos. Utiliza el patrón Singleton para obtener la instancia Dao. 
+	 * Metodo para actualizar el objeto usuario en la base de datos. Utiliza el patron Singleton para obtener la instancia Dao. 
 	 * @throws SQLException si ocurre un error al insertar el usuario en la base de datos.
 	 */
 	public void actualizar () throws SQLException {
@@ -336,8 +336,8 @@ public class Usuario {
 	}
 	
 	/**
-	 * Método para borrar el objeto usuario en la base de datos. Utiliza el patrón Singleton para obtener la instancia Dao. 
-	 * @param id identificador único del usuario
+	 * Metodo para borrar el objeto usuario en la base de datos. Utiliza el patron Singleton para obtener la instancia Dao. 
+	 * @param id identificador unico del usuario
 	 * @throws SQLException si ocurre un error al insertar el usuario en la base de datos.
 	 */
 	public void borrarUsario (int id) throws SQLException {
@@ -345,7 +345,7 @@ public class Usuario {
 	}
 	
 	/**
-	 * Método que realiza un intento de inicio de sesión para el usuario con la contraseña que se ha proporcionado.
+	 * Metodo que realiza un intento de inicio de sesion para el usuario con la contraseña que se ha proporcionado.
 	 * @param password contraseña del usuario
 	 * @return true si el inicio de sesión fue exitoso, false si no fue existoso. 
 	 * @throws SQLException si ocurre un error al insertar el usuario en la base de datos.

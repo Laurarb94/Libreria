@@ -8,8 +8,8 @@ import com.google.gson.Gson;
 import dao.DaoLibro;
 
 /**
- * Clase que representa el objeto Libro en el sistema. Esta clase va a almacenar información relativa al id del libro, su isbn, 
- * título, datos del autor,el género, la psinopsis y la foto de portada. 
+ * Clase que representa el objeto Libro en el sistema. Esta clase va a almacenar informacion relativa al id del libro, su isbn, 
+ * titulo, datos del autor,el genero, la psinopsis y la foto de portada. 
  */
 public class Libro {
 
@@ -22,7 +22,7 @@ public class Libro {
 	 */
 	String isbn;
 	/**
-	 * Representa el título del Libro
+	 * Representa el titulo del Libro
 	 */
 	String tituloLibro;
 	/**
@@ -38,7 +38,7 @@ public class Libro {
 	 */
 	String apellido2AutorLibro; 
 	/**
-	 * Representa el género del Libro
+	 * Representa el genero del Libro
 	 */
 	String generoLibro;
 	/**
@@ -58,14 +58,14 @@ public class Libro {
 	}
 
 	/**
-	 * Constructor para <strong>creación del objeto. Este constructor se usa cuando los datos van a la bbdd</strong>
-	 * @param idLibro identificador único del objeto libro
+	 * Constructor para <strong>creacion del objeto. Este constructor se usa cuando los datos van a la bbdd</strong>
+	 * @param idLibro identificador unico del objeto libro
 	 * @param isbn el isbn del libro
-	 * @param tituloLibro el título del libro
+	 * @param tituloLibro el titulo del libro
 	 * @param nombreAutorLibro el nombre del autor que ha escrito el libro
 	 * @param apellido1AutorLibro el primer apellido del autor que ha escrito el libro
 	 * @param apellido2AutorLibro el segundo apellido del autor que ha escrito el libro
-	 * @param generoLibro el género del libro 
+	 * @param generoLibro el genero del libro 
 	 * @param psinopsis la psinopsis del libro
 	 * @param fotoPortada la foto de portada del libro
 	 */
@@ -84,13 +84,13 @@ public class Libro {
 	}
 
 	/**
-	 * Constructor para <strong>creación del objeto libro. Este constructor se usa cuando los datos vienen de un formulario</strong>
+	 * Constructor para <strong>creacion del objeto libro. Este constructor se usa cuando los datos vienen de un formulario</strong>
 	 * @param isbn el isbn del libro
-	 * @param tituloLibro el título del libro
+	 * @param tituloLibro el titulo del libro
 	 * @param nombreAutorLibro el nombre del autor que ha escrito el libro
 	 * @param apellido1AutorLibro el primer apellido del autor que ha escrito el libro
 	 * @param apellido2AutorLibro el segundo apellido del autor que ha escrito el libro
-	 * @param generoLibro el género del libro 
+	 * @param generoLibro el genero del libro 
 	 * @param psinopsis la psinopsis del libro
 	 * @param fotoPortada la foto de portada del libro
 	 */
@@ -111,11 +111,11 @@ public class Libro {
 	/**
 	 * Constructor para <strong>creación del objeto libro</strong>. Constructor sin id y sin foto de portada.
 	 *  @param isbn el isbn del libro
-	 * @param tituloLibro el título del libro
+	 * @param tituloLibro el titulo del libro
 	 * @param nombreAutorLibro el nombre del autor que ha escrito el libro
 	 * @param apellido1AutorLibro el primer apellido del autor que ha escrito el libro
 	 * @param apellido2AutorLibro el segundo apellido del autor que ha escrito el libro
-	 * @param generoLibro el género del libro 
+	 * @param generoLibro el genero del libro 
 	 * @param psinopsis la psinopsis del libro
 	 */
 	public Libro(String isbn, String tituloLibro, String nombreAutorLibro, String apellido1AutorLibro,
@@ -131,7 +131,7 @@ public class Libro {
 	}
 	
 	/**
-	 * Método de inclusión del id en el objeto
+	 * Metodo de inclusion del id en el objeto
 	 * @return el id en tipo entero
 	 */
 	public int getIdLibro() {
@@ -139,7 +139,7 @@ public class Libro {
 	}
 
 	/**
-	 * Método para establecer el identificador único del libro.
+	 * Metodo para establecer el identificador unico del libro.
 	 * @param id forma en que se establece el nuevo identificador del libro.
 	 */
 	public void setIdLibro(int idLibro) {
@@ -147,7 +147,7 @@ public class Libro {
 	}
 
 	/**
-	 * Método para obtener el isbn del libro
+	 * Metodo para obtener el isbn del libro
 	 * @return el isbn del libro
 	 */
 	public String getIsbn() {
@@ -155,7 +155,7 @@ public class Libro {
 	}
 
 	/**
-	 * Método para establecer el isbn del libro
+	 * Metodo para establecer el isbn del libro
 	 * @param isbn el nuevo isbn del libro
 	 */
 	public void setIsbn(String isbn) {
@@ -163,23 +163,23 @@ public class Libro {
 	}
 
 	/**
-	 * Método para obtener el título del libro
-	 * @return el título del libro
+	 * Metodo para obtener el titulo del libro
+	 * @return el titulo del libro
 	 */
 	public String getTituloLibro() {
 		return tituloLibro;
 	}
 
 	/**
-	 * Método para establecer el título del libro
-	 * @param tituloLibro el nuevo título del libro
+	 * Metodo para establecer el titulo del libro
+	 * @param tituloLibro el nuevo titulo del libro
 	 */
 	public void setTituloLibro(String tituloLibro) {
 		this.tituloLibro = tituloLibro;
 	}
 
 	/**
-	 * Método para obtener el nombre del autor del libro
+	 * Metodo para obtener el nombre del autor del libro
 	 * @return el nombre del autor del libro
 	 */
 	public String getNombreAutorLibro() {
@@ -187,7 +187,7 @@ public class Libro {
 	}
 
 	/**
-	 * Método para establecer el nombre del autor dellibro
+	 * Metodo para establecer el nombre del autor dellibro
 	 * @param nombreAutorLibro el nuevo nombre del autor del libro
 	 */
 	public void setNombreAutorLibro(String nombreAutorLibro) {
@@ -195,7 +195,7 @@ public class Libro {
 	}
 
 	/**
-	 * Método para obtener el primer apellido del autor del libro
+	 * Metodo para obtener el primer apellido del autor del libro
 	 * @return el primer apellido del autor del libro
 	 */
 	public String getApellido1AutorLibro() {
@@ -203,7 +203,7 @@ public class Libro {
 	}
 
 	/**
-	 * Método para establecer el primer apellido del autor del libro
+	 * Metodo para establecer el primer apellido del autor del libro
 	 * @param apellido1AutorLibro el nuevo primer apellido del autor del libro
 	 */
 	public void setApellido1AutorLibro(String apellido1AutorLibro) {
@@ -211,7 +211,7 @@ public class Libro {
 	}
 
 	/**
-	 * Método para obtener el segundo apellido del autor del libro
+	 * Metodo para obtener el segundo apellido del autor del libro
 	 * @return el segundo apellido del autor del libro
 	 */
 	public String getApellido2AutorLibro() {
@@ -219,7 +219,7 @@ public class Libro {
 	}
 
 	/**
-	 * Método para establecer el segundo apellido del autor del libro
+	 * Metodo para establecer el segundo apellido del autor del libro
 	 * @param apellido2AutorLibro el nuevo segundo apellido del autor del libro
 	 */
 	public void setApellido2AutorLibro(String apellido2AutorLibro) {
@@ -227,23 +227,23 @@ public class Libro {
 	}
 
 	/**
-	 * Método para obtener el género del libro
-	 * @return el género del libro
+	 * Metodo para obtener el genero del libro
+	 * @return el genero del libro
 	 */
 	public String getGeneroLibro() {
 		return generoLibro;
 	}
 
 	/**
-	 * Método para establecer el género del libro
-	 * @param generoLibro el nuevo género del libro
+	 * Metodo para establecer el genero del libro
+	 * @param generoLibro el nuevo genero del libro
 	 */
 	public void setGeneroLibro(String generoLibro) {
 		this.generoLibro = generoLibro;
 	}
 
 	/**
-	 * Método para obtener la psinosis del libro
+	 * Metodo para obtener la psinosis del libro
 	 * @return la psinopsis el libro
 	 */
 	public String getPsinopsis() {
@@ -251,7 +251,7 @@ public class Libro {
 	}
 
 	/**
-	 * Método para establcer la psinopsis del libro
+	 * Metodo para establcer la psinopsis del libro
 	 * @param psinopsis la nueva psinopsis del libro
 	 */
 	public void setPsinopsis(String psinopsis) {
@@ -259,7 +259,7 @@ public class Libro {
 	}
 
 	/**
-	 * Método para obtener la foto de portada del libro
+	 * Metodo para obtener la foto de portada del libro
 	 * @return la foto de portada del libro
 	 */
 	public String getFotoPortada() {
@@ -267,7 +267,7 @@ public class Libro {
 	}
 
 	/**
-	 * Método para establecer la foto de portada del libro
+	 * Metodo para establecer la foto de portada del libro
 	 * @param fotoPortada la nuvea foto de portada
 	 */
 	public void setFotoPortada(String fotoPortada) {
@@ -275,7 +275,7 @@ public class Libro {
 	}
 	
 	/**
-	 * Método que inserta el objeto libro en la base de datos. Utiliza el patrón Singleton para obtener la instancia Dao. 
+	 * Metodo que inserta el objeto libro en la base de datos. Utiliza el patron Singleton para obtener la instancia Dao. 
 	 * @throws SQLException si ocurre un error al insertar el usuario en la base de datos. 
 	 */
 	public void insertarLibro () throws SQLException {
@@ -283,7 +283,7 @@ public class Libro {
 	}
 	
 	/**
-	 * Método para actualizar el objeto libro en la base de datos. Utiliza el patrón Singleton para obtener la instancia Dao. 
+	 * Metodo para actualizar el objeto libro en la base de datos. Utiliza el patron Singleton para obtener la instancia Dao. 
 	 * @throws SQLException si ocurre un error al insertar el usuario en la base de datos.
 	 */
 	public void actualizar () throws SQLException {
@@ -291,8 +291,8 @@ public class Libro {
 	}
 	
 	/**
-	 * Método para borrar el objeto libro en la base de datos. Utiliza el patrón Singleton para obtener la instancia Dao. 
-	 * @param idLibro identificador único del libro
+	 * Metodo para borrar el objeto libro en la base de datos. Utiliza el patron Singleton para obtener la instancia Dao. 
+	 * @param idLibro identificador unico del libro
 	 * @throws SQLException si ocurre un error al insertar el usuario en la base de datos.
 	 */
 	public void borrar (int idLibro) throws SQLException {
@@ -300,8 +300,8 @@ public class Libro {
 	}
 	
 	/**
-	 * Método para obtener al libro por su id
-	 * @param idLibro identificador único del libro
+	 * Metodo para obtener al libro por su id
+	 * @param idLibro identificador unico del libro
 	 * @throws SQLException si ocurre un error al insertar el usuario en la base de datos.
 	 */
 	public void obtenerPorId (int idLibro) throws SQLException {
@@ -333,7 +333,7 @@ public class Libro {
 	
 
 	/**
-	 * Método toString. Devuelve una representación de cadena del objeto libro. Esta representación 
+	 * Metodo toString. Devuelve una representación de cadena del objeto libro. Esta representacion 
 	 * incluye los valores de todos los atributos del obteto. 
 	 */
 	@Override

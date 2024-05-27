@@ -5,17 +5,17 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /**
- * Clase DBConexion, proporciona una conexión única a la base de datos
+ * Clase DBConexion, proporciona una sola conexion a la base de datos
  */
 public class DBConexion {
 
 	/**
-	 * Instancia única a la conexión de la bbdd
+	 * Instancia unica a la conexion de la bbdd
 	 */
 	public static Connection instance = null; 
 	
 	/**
-	 * URL para la conexión JDBC a la bbdd 
+	 * URL para la conexion JDBC a la bbdd 
 	 */
 	public static final String JDBC_URL = "jdbc:mysql://localhost:3306/libreria";
 	
@@ -27,9 +27,9 @@ public class DBConexion {
 	}
 
 	/**
-	 * Método que implementa el patrón Singleton. Devuelve una instancia única de la conexión a la bbdd. 
-	 * Si la conexión no existe se crea una nueva
-	 * @return la instancia única de la conexión a la bbdd. 
+	 * Metodo que implementa el patron Singleton. Devuelve una instancia unica de la conexion a la bbdd. 
+	 * Si la conexion no existe se crea una nueva
+	 * @return la instancia unica de la conexion a la bbdd. 
 	 * @throws SQLException si ocurre un error al intentar conectar a la bbdd
 	 */
 	public static Connection getConexion () throws SQLException {
