@@ -6,6 +6,11 @@ import com.google.gson.Gson;
 
 import dao.DaoUsuario;
 
+/**
+ * Clase que representa un usuario del sistema. 
+ * Esta clase almacena información acerca de su id, nombre, apellidos, teléfono, mail, código postal, permiso y contraseña. 
+ * Se va a utlizar para crear, modificar, borrar y/o recuperar información sobre usuarios del sistema. 
+ */
 public class Usuario {
 
 
